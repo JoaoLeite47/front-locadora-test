@@ -6,7 +6,8 @@
   background-color: $primaryCollor;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
+  transition: all .5s ease;
 
   .wrapper {
     padding: 10px 30px;
@@ -15,14 +16,52 @@
     justify-content: space-between;
 
     .left {
-        .logo {
-            font-size: 40px;
-            font-weight: 700;
-            text-decoration: none;
-            color: indianred;
-        }
+      .logo {
+        font-size: 40px;
+        font-weight: 700;
+        text-decoration: none;
+        color: indianred;
       }
+    }
   }
 
+  .right {
+    .hamburguer {
+      width: 32px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
 
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: blue;
+        transform-origin: left;
+        transition: all 1s ease;
+      }
+    }
+  }
+
+  &.active {
+    background-color: blue;
+    color: white;
+
+    .hamburguer {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 }
