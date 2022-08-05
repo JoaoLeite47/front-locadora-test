@@ -5,10 +5,11 @@ import Cliente from "./components/Cliente/Cliente";
 import Alocacao from "./components/Alocacao/Alocacao";
 import Carros from "./components/Carros/Carros";
 import Categoria from "./components/Categoria/Categoria";
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Topbar />
       <div className="sections">
         <Intro />
