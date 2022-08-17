@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,gBAAgB,EAAE,SAAS;CAC9B",
-    "sources": [
-        "Intro.scss"
-    ],
-    "names": [],
-    "file": "Intro.css"
-}
+{"version":3,"sources":["Intro.scss","Intro.css"],"names":[],"mappings":"AAAA;EACI,2BAAA;ACCJ","file":"Intro.css"}

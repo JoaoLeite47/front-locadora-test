@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,gBAAgB,EAAE,IAAI;CACzB",
-    "sources": [
-        "Carros.scss"
-    ],
-    "names": [],
-    "file": "Carros.css"
-}
+{"version":3,"sources":["Carros.scss","Carros.css"],"names":[],"mappings":"AAAA;EACI,sBAAA;ACCJ","file":"Carros.css"}

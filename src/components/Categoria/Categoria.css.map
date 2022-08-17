@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,gBAAgB,EAAE,KAAK;CACxB",
-    "sources": [
-        "Categoria.scss"
-    ],
-    "names": [],
-    "file": "Categoria.css"
-}
+{"version":3,"sources":["Categoria.scss","Categoria.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;ACCF","file":"Categoria.css"}

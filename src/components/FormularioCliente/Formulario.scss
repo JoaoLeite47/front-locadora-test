@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+table th{
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  border: solid 2px black;
+  width: calc(100% - 40px);
+}

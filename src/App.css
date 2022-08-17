@@ -1,7 +1,6 @@
 .app {
   height: 100vh;
 }
-
 .app .sections {
   width: 100%;
   height: calc(100vh - 70px);
@@ -13,14 +12,11 @@
       scroll-snap-type: y mandatory;
   scrollbar-width: none;
 }
-
 .app .sections::-webkit-scrollbar {
   display: none;
 }
-
 .app .sections > * {
   width: 100vw;
   height: calc(100vh - 70px);
   scroll-snap-align: start;
-}
-/*# sourceMappingURL=App.css.map */
+}/*# sourceMappingURL=App.css.map */
