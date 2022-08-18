@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Formulario.css";
+import "./FormularioCliente.css";
 
 export default function Formulario({ list = [] }) {
   const [orderColumn, setOrderColumn] = useState("nome");

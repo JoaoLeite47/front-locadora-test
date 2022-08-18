@@ -1,7 +1,7 @@
 import "./Cliente.css";
 
 import React, { useState, useEffect } from "react";
-import Formulario from "../FormularioCliente/Formulario";
+import Formulario from "../FormularioCliente/FormularioCliente";
 
 export default function Cliente() {
   let [list, setList] = useState([]);
