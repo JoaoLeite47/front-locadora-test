@@ -1,0 +1,72 @@
+.Intro {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.Intro .introContainer {
+  width: 43%;
+  height: 24vh;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  display: flex;
+}
+.Intro .introContainer .esquerda {
+  width: 30%;
+}
+.Intro .introContainer .esquerda p {
+  text-align: start;
+  color: brown;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 12;
+  font-weight: 800;
+}
+.Intro .introContainer .esquerda p span {
+  color: green;
+}
+.Intro .introContainer .esquerda .subTitle {
+  font-weight: 300;
+  color: rgb(172, 22, 22);
+}
+.Intro .introContainer .esquerda button {
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  margin-right: 50%;
+  margin-left: 20%;
+}
+.Intro .introContainer .direita {
+  width: 60%;
+}
+.Intro .introContainer .direita .graphic {
+  margin-top: 20px;
+  color: yellow;
+}
+.Intro .itensContainer {
+  width: 52%;
+  height: 22vh;
+  background-color: blue;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+.Intro .itensContainer .toptitle {
+  display: flex;
+  justify-content: center;
+}
+.Intro .itensContainer .toptitle p {
+  font-weight: 400;
+  font-size: 40px;
+}
+.Intro .itensContainer .cadastros {
+  display: flex;
+  justify-content: space-around;
+}
+.Intro .itensContainer .cadastros div button {
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}/*# sourceMappingURL=IntroClientes.css.map */

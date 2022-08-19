@@ -1,0 +1,82 @@
+.Intro {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+
+  .introContainer {
+    width: 43%;
+    height: 24vh;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    display: flex;
+
+    .esquerda {
+      width: 30%;
+      p {
+        text-align: start;
+        color: brown;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 12;
+        font-weight: 800;
+
+        span {
+          color: green;
+        }
+      }
+
+      .subTitle {
+        font-weight: 300;
+        color: rgb(172, 22, 22);
+      }
+
+      button {
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        background-color: green;
+        color: white;
+        margin-right: 50%;
+        margin-left: 20%;
+      }
+    }
+
+    .direita {
+      width: 60%;
+      .graphic {
+        margin-top: 20px;
+        color: yellow;
+      }
+    }
+  }
+
+  .itensContainer {
+    width: 52%;
+    height: 22vh;
+    background-color: blue;
+    margin-left: 15px;
+    border-radius: 10px;
+
+    .toptitle {
+      display: flex;
+      justify-content: center;
+      p {
+        font-weight: 400;
+        font-size: 40px;
+      }
+    }
+    .cadastros {
+      display: flex;
+      justify-content: space-around;
+      div {
+        button {
+          padding: 20px;
+          margin-top: 10px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
