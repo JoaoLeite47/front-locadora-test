@@ -6,7 +6,7 @@
 .Intro .introContainer {
   width: 43%;
   height: 24vh;
-  background-color: antiquewhite;
+  background-color: rgb(77, 77, 77);
   border-radius: 10px;
   display: flex;
 }
@@ -15,28 +15,38 @@
 }
 .Intro .introContainer .esquerda p {
   text-align: start;
-  color: brown;
+  color: #39ff14;
   margin-top: 10px;
   margin-left: 10px;
   font-size: 12;
   font-weight: 800;
 }
 .Intro .introContainer .esquerda p span {
-  color: green;
+  color: white;
 }
 .Intro .introContainer .esquerda .subTitle {
   font-weight: 300;
-  color: rgb(172, 22, 22);
+  color: white;
 }
 .Intro .introContainer .esquerda button {
   margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 10px;
-  background-color: green;
-  color: white;
+  background-color: rgb(121, 120, 120);
   margin-right: 50%;
   margin-left: 20%;
+  cursor: pointer;
+  border: none;
+  transition: all ease-in 0.1s;
+}
+.Intro .introContainer .esquerda button a {
+  color: white;
+  text-decoration: none;
+}
+.Intro .introContainer .esquerda button:hover {
+  background-color: #39ff14;
+  color: rgb(121, 120, 120);
 }
 .Intro .introContainer .direita {
   width: 60%;
@@ -48,7 +58,7 @@
 .Intro .itensContainer {
   width: 52%;
   height: 22vh;
-  background-color: blue;
+  background-color: rgb(77, 77, 77);
   margin-left: 15px;
   border-radius: 10px;
 }
@@ -59,14 +69,29 @@
 .Intro .itensContainer .toptitle p {
   font-weight: 400;
   font-size: 40px;
+  color: #39ff14;
 }
 .Intro .itensContainer .cadastros {
   display: flex;
   justify-content: space-around;
 }
 .Intro .itensContainer .cadastros div button {
-  padding: 20px;
+  border-radius: 10px;
+  padding: 15px;
   margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
+  background-color: rgb(121, 120, 120);
+  cursor: pointer;
+  border: none;
+  transition: all ease-in 0.2s;
+}
+.Intro .itensContainer .cadastros div button p {
+  color: white;
+}
+.Intro .itensContainer .cadastros div button .registration_icon {
+  color: #39ff14;
+}
+.Intro .itensContainer .cadastros div button:hover {
+  background-color: rgb(77, 77, 77);
 }/*# sourceMappingURL=IntroClientes.css.map */

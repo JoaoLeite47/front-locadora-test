@@ -1,1 +1,31 @@
-/*# sourceMappingURL=FormularioAlocacao.css.map */
+.table_alocacao {
+  width: 100%;
+}
+
+.table_alocacao th,
+.table_alocacao td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+th {
+  color: #39ff14;
+}
+
+td {
+  color: white;
+}
+
+.table_alocacao th {
+  cursor: pointer;
+}
+
+input {
+  margin-top: 20px;
+  padding: 10px;
+  border-color: #39ff14;
+  color: rgb(77, 77, 77);
+  background-color: white;
+  width: 95%;
+  border-radius: 10px;
+}/*# sourceMappingURL=FormularioAlocacao.css.map */

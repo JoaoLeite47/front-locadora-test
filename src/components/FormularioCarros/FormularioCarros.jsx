@@ -25,7 +25,7 @@ export default function FormularioCarros({ list = [] }) {
   return (
     <div>
       <input placeholder="Chassi Example: 458eds45yg" onChange={handleFilter} />
-      <table>
+      <table className="table_carros">
         <thead>
           <tr>
             <th onClick={() => handleOrder("chassi")}>Chassi</th>

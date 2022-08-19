@@ -1,1 +1,1 @@
-{"version":3,"sources":["Cliente.scss","Cliente.css"],"names":[],"mappings":"AAAA;EACI,8BAAA;ACCJ","file":"Cliente.css"}
+{"version":3,"sources":["Cliente.scss","../../Global.scss","Cliente.css"],"names":[],"mappings":"AAEA;EACE,iCCHc;ACEhB","file":"Cliente.css"}

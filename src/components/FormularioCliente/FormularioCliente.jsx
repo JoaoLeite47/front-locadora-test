@@ -25,9 +25,9 @@ export default function Formulario({ list = [] }) {
   return (
     <div>
       <input placeholder="CPF Example: 56558215225" onChange={handleFilter} />
-      <table>
-        <thead>
-          <tr>
+      <table className="table_cliente">
+        <thead className="thead_cliente">
+          <tr className="tr_cliente">
             <th>RG</th>
             <th>Data de nascimento</th>
             <th>CNH</th>

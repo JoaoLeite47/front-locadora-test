@@ -25,7 +25,7 @@ export default function FormularioCategoria({ list = [] }) {
   return (
     <div>
       <input placeholder="Código Example: 4" onChange={handleFilter} />
-      <table>
+      <table className="table_categoria">
         <thead>
           <tr>
             <th onClick={() => handleOrder("cod_categ")}>Codigo da categoria</th>

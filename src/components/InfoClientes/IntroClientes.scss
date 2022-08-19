@@ -1,3 +1,5 @@
+@import "../../Global.scss";
+
 .Intro {
   display: flex;
   margin-left: 40px;
@@ -6,7 +8,7 @@
   .introContainer {
     width: 43%;
     height: 24vh;
-    background-color: antiquewhite;
+    background-color: $primaryCollor;
     border-radius: 10px;
     display: flex;
 
@@ -14,20 +16,20 @@
       width: 30%;
       p {
         text-align: start;
-        color: brown;
+        color: $secondaryCollor;
         margin-top: 10px;
         margin-left: 10px;
         font-size: 12;
         font-weight: 800;
 
         span {
-          color: green;
+          color: white;
         }
       }
 
       .subTitle {
         font-weight: 300;
-        color: rgb(172, 22, 22);
+        color: white;
       }
 
       button {
@@ -35,10 +37,20 @@
         padding-left: 20px;
         padding-right: 20px;
         border-radius: 10px;
-        background-color: green;
-        color: white;
+        background-color: $backgroundCollor;
         margin-right: 50%;
         margin-left: 20%;
+        cursor: pointer;
+        border: none;
+        transition: all ease-in 0.1s;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      button:hover {
+        background-color: $secondaryCollor;
+        color: $backgroundCollor;
       }
     }
 
@@ -54,7 +66,7 @@
   .itensContainer {
     width: 52%;
     height: 22vh;
-    background-color: blue;
+    background-color: $primaryCollor;
     margin-left: 15px;
     border-radius: 10px;
 
@@ -64,6 +76,7 @@
       p {
         font-weight: 400;
         font-size: 40px;
+        color: $secondaryCollor;
       }
     }
     .cadastros {
@@ -71,10 +84,26 @@
       justify-content: space-around;
       div {
         button {
-          padding: 20px;
+          border-radius: 10px;
+          padding: 15px;
           margin-top: 10px;
           margin-left: 20px;
           margin-right: 20px;
+          background-color: $backgroundCollor;
+          cursor: pointer;
+          border: none;
+          transition: all ease-in 0.2s;
+
+          p {
+            color: white;
+          }
+
+          .registration_icon {
+            color: $secondaryCollor;
+          }
+        }
+        button:hover {
+          background-color: $primaryCollor;
         }
       }
     }

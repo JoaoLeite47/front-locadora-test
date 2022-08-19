@@ -1,1 +1,1 @@
-{"version":3,"sources":["Categoria.scss","Categoria.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;ACCF","file":"Categoria.css"}
+{"version":3,"sources":["Categoria.scss","../../Global.scss","Categoria.css"],"names":[],"mappings":"AAEA;EACE,oCCDiB;ACAnB","file":"Categoria.css"}

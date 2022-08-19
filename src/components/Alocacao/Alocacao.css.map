@@ -1,1 +1,1 @@
-{"version":3,"sources":["Alocacao.scss","Alocacao.css"],"names":[],"mappings":"AAAA;EACE,wBAAA;ACCF","file":"Alocacao.css"}
+{"version":3,"sources":["Alocacao.scss","../../Global.scss","Alocacao.css"],"names":[],"mappings":"AAEA;EACE,oCCDiB;ACAnB","file":"Alocacao.css"}

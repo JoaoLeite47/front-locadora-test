@@ -1,1 +1,1 @@
-{"version":3,"sources":["Carros.scss","Carros.css"],"names":[],"mappings":"AAAA;EACI,sBAAA;ACCJ","file":"Carros.css"}
+{"version":3,"sources":["Carros.scss","../../Global.scss","Carros.css"],"names":[],"mappings":"AAEA;EACE,iCCHc;ACEhB","file":"Carros.css"}

@@ -1,20 +1,31 @@
-table {
+.table_cliente {
   width: 100%;
 }
 
-table th,
-table td {
+.table_cliente th,
+.table_cliente td {
   padding: 10px 20px;
   text-align: left;
 }
 
-table th {
+th {
+  color: #39ff14;
+}
+
+td {
+  color: white;
+}
+
+.table_cliente th {
   cursor: pointer;
 }
 
 input {
+  margin-top: 20px;
   padding: 10px;
-  border: solid 2px black;
+  border-color: #39ff14;
+  color: rgb(77, 77, 77);
+  background-color: white;
   width: 95%;
   border-radius: 10px;
 }/*# sourceMappingURL=FormularioCliente.css.map */

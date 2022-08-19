@@ -1,5 +1,9 @@
 import React from "react";
 import "./IntroClientes.css";
+import { FiUser } from "react-icons/fi";
+import { AiFillCar } from "react-icons/ai";
+import { BiCategory } from "react-icons/bi";
+import { BiDetail } from "react-icons/bi";
 
 export default function IntroClientes() {
   return (
@@ -12,7 +16,9 @@ export default function IntroClientes() {
             <p>
               Nós temos <span>92</span> clientes Incríveis!
             </p>
-            <button>Clientes</button>
+            <button>
+              <a href="#cliente">Clientes</a>
+            </button>
           </div>
           <div className="direita">
             <p className="graphic">
@@ -29,10 +35,22 @@ export default function IntroClientes() {
           </div>
           <div className="cadastros">
             <div>
-              <button></button>
-              <button></button>
-              <button></button>
-              <button></button>
+              <button>
+                <FiUser size="3em" className="registration_icon" />
+                <p>Clientes</p>
+              </button>
+              <button>
+                <AiFillCar size="3em" className="registration_icon" />
+                <p>Carros</p>
+              </button>
+              <button>
+                <BiCategory size="3em" className="registration_icon" />
+                <p>Categorias</p>
+              </button>
+              <button>
+                <BiDetail size="3em" className="registration_icon" />
+                <p>Alocações</p>
+              </button>
             </div>
           </div>
         </div>

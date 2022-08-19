@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"FormularioAlocacao.css"}
+{"version":3,"sources":["FormularioAlocacao.scss","FormularioAlocacao.css","../../Global.scss"],"names":[],"mappings":"AAEA;EACI,WAAA;ACDJ;;ADIE;;EAEE,kBAAA;EACA,gBAAA;ACDJ;;ADGE;EACE,cEXc;ADWlB;;ADEE;EACE,YAAA;ACCJ;;ADEE;EACE,eAAA;ACCJ;;ADEE;EACE,gBAAA;EACA,aAAA;EACA,qBExBc;EFyBd,sBE1BY;EF2BZ,uBAAA;EACA,UAAA;EACA,mBAAA;ACCJ","file":"FormularioAlocacao.css"}

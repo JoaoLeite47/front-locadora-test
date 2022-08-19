@@ -15,7 +15,7 @@ export default function FormularioAlocacao({ list = [] }) {
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
-    list = list.filter((item) => exp.test(item.cpf));
+    list = list.filter((item) => exp.test(item.id_aloc));
   }
 
   const handleFilter = (e) => {
@@ -26,28 +26,30 @@ export default function FormularioAlocacao({ list = [] }) {
     <div>
       <div>
         <input placeholder="Id Example: 5" onChange={handleFilter} />
-        <table>
+        <table className="table_alocacao">
           <thead>
             <tr>
               <th>CPF</th>
-              <th>Número de chassi</th>
+              <th>CHASSI</th>
               <th>Data de saída</th>
               <th>Data de entrega</th>
               <th onClick={() => handleOrder("id_aloc")}>Id da alocação</th>
             </tr>
           </thead>
           <tbody>
-            {list.map(({ cpf_fk, chassi_fk, dt_saida, dt_entrega, id_aloc }) => {
-              return (
-                <tr key={id_aloc}>
-                  <td>{cpf_fk}</td>
-                  <td>{chassi_fk}</td>
-                  <td>{dt_saida}</td>
-                  <td>{dt_entrega}</td>
-                  <td>{id_aloc}</td>
-                </tr>
-              );
-            })}
+            {list.map(
+              ({ cpf_fk, chassi_fk, dt_saida, dt_entrega, id_aloc }) => {
+                return (
+                  <tr key={id_aloc}>
+                    <td>{cpf_fk}</td>
+                    <td>{chassi_fk}</td>
+                    <td>{dt_saida}</td>
+                    <td>{dt_entrega}</td>
+                    <td>{id_aloc}</td>
+                  </tr>
+                );
+              }
+            )}
           </tbody>
         </table>
       </div>
