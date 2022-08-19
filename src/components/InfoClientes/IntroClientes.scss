@@ -12,7 +12,7 @@
     border-radius: 10px;
     display: flex;
 
-    .esquerda {
+    .left {
       width: 30%;
       p {
         text-align: start;
@@ -23,7 +23,7 @@
         font-weight: 800;
 
         span {
-          color: white;
+          color: #ffff00;
         }
       }
 
@@ -54,18 +54,18 @@
       }
     }
 
-    .direita {
+    .right {
       width: 60%;
       .graphic {
         margin-top: 20px;
-        color: yellow;
+        color: #ffff00;
       }
     }
   }
 
   .itensContainer {
     width: 52%;
-    height: 22vh;
+    height: 24vh;
     background-color: $primaryCollor;
     margin-left: 15px;
     border-radius: 10px;

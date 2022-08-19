@@ -1,0 +1,23 @@
+@import "../../Global.scss";
+
+.Introsecond {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+
+  .introContainerSecond {
+    width: 43%;
+    height: 50vh;
+    background-color: $primaryCollor;
+    border-radius: 10px;
+    display: flex;
+  }
+
+  .itensContainerSecond {
+    width: 52%;
+    height: 50vh;
+    background-color: $primaryCollor;
+    margin-left: 15px;
+    border-radius: 10px;
+  }
+}

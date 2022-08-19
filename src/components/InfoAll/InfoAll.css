@@ -1,0 +1,19 @@
+.Introsecond {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.Introsecond .introContainerSecond {
+  width: 43%;
+  height: 50vh;
+  background-color: rgb(77, 77, 77);
+  border-radius: 10px;
+  display: flex;
+}
+.Introsecond .itensContainerSecond {
+  width: 52%;
+  height: 50vh;
+  background-color: rgb(77, 77, 77);
+  margin-left: 15px;
+  border-radius: 10px;
+}/*# sourceMappingURL=InfoAll.css.map */

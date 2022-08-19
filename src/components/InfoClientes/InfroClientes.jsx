@@ -10,7 +10,7 @@ export default function IntroClientes() {
     <div>
       <div className="Intro">
         <div className="introContainer">
-          <div className="esquerda">
+          <div className="left">
             <p>Bem vindo!</p>
             <p className="subTitle">App de testes versão 1</p>
             <p>
@@ -20,7 +20,7 @@ export default function IntroClientes() {
               <a href="#cliente">Clientes</a>
             </button>
           </div>
-          <div className="direita">
+          <div className="right">
             <p className="graphic">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
               facere eveniet, harum cupiditate alias eius porro accusamus optio
