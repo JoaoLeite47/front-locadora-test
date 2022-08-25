@@ -5,10 +5,8 @@ export default function InfoAll() {
   return (
     <div>
       <div className="Intro Introsecond">
-        <div className="introContainer introContainerSecond">
-        </div>
-        <div className="itensContainer itensContainerSecond">
-        </div>
+        <div className="introContainer introContainerSecond"></div>
+        <div className="itensContainer itensContainerSecond"></div>
       </div>
     </div>
   );

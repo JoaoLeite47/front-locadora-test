@@ -5,7 +5,7 @@ import { AiFillCar } from "react-icons/ai";
 import { BiCategory } from "react-icons/bi";
 import { BiDetail } from "react-icons/bi";
 
-export default function IntroClientes() {
+export default function IntroClientes({ graphic = [] }) {
   return (
     <div>
       <div className="Intro">
@@ -14,7 +14,7 @@ export default function IntroClientes() {
             <p>Bem vindo!</p>
             <p className="subTitle">App de testes versão 1</p>
             <p>
-              Nós temos <span>92</span> clientes Incríveis!
+              Nós temos <span>{graphic.length}</span> clientes Incríveis!
             </p>
             <button>
               <a href="#cliente">Clientes</a>
