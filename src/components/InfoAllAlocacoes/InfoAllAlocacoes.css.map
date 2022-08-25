@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"InfoAllAlocacoes.css"}
+{"version":3,"sources":["InfoAllAlocacoes.scss","../../Global.scss","InfoAllAlocacoes.css"],"names":[],"mappings":"AAEA;EACE,WAAA;EACA,YAAA;EACA,oCCHiB;EDIjB,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,sBAAA;EACA,mBAAA;EACA,WAAA;AEDF;AFGE;EACE,aAAA;EACA,gBAAA;EACA,sBChBY;ACehB;AFGI;EACE,eAAA;EACA,gBAAA;EACA,cCpBY;ACmBlB","file":"InfoAllAlocacoes.css"}
