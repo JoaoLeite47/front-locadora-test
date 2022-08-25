@@ -1,0 +1,50 @@
+.carrosModal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrosModal .carrosModalContainer {
+  background-color: rgb(77, 77, 77);
+  color: black;
+  width: 70%;
+  height: 60%;
+  border-radius: 20px;
+}
+.carrosModal .carrosModalContainer .carrosModalClose {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 32px;
+  height: 32px;
+  right: calc(-100% + 64px);
+  cursor: pointer;
+  top: 16px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.carrosModal .carrosModalContainer .carrosModalClose:before, .carrosModal .carrosModalContainer .carrosModalClose:after {
+  content: "";
+  position: absolute;
+  width: 2.5px;
+  height: 24px;
+  background-color: red;
+}
+.carrosModal .carrosModalContainer .carrosModalClose:before {
+  transform: rotate(45deg);
+}
+.carrosModal .carrosModalContainer .carrosModalClose:after {
+  transform: rotate(-45deg);
+}
+.carrosModal .carrosModalContainer .carrosModalContant {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}/*# sourceMappingURL=ModalCarros.css.map */
