@@ -1,6 +1,6 @@
 import "./Intro.css";
 import React, { useState, useEffect } from "react";
-import IntroClientes from "../InfoClientes/InfroClientes";
+import IntroClientes from "../IntroClientes/IntroClientes";
 import InfoAll from "../InfoAll/InfoAll";
 
 export default function Intro() {
