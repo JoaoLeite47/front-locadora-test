@@ -41,15 +41,19 @@ export default function FormularioCarros({ list = [] }) {
           {list.map(
             ({ chassi, cor, modelo, marca, placa, ano, categoria_fk }) => {
               return (
-                <tr key={chassi}>
-                  <td>{chassi}</td>
-                  <td>{cor}</td>
-                  <td>{modelo}</td>
-                  <td>{marca}</td>
-                  <td>{placa}</td>
-                  <td>{ano}</td>
-                  <td>{categoria_fk}</td>
-                </tr>
+                <>
+                  <tr key={chassi}>
+                    <td>{chassi}</td>
+                    <td>{cor}</td>
+                    <td>{modelo}</td>
+                    <td>{marca}</td>
+                    <td>{placa}</td>
+                    <td>{ano}</td>
+                    <td>{categoria_fk}</td>
+                    <button className="update buttonAction">Atualizar</button>
+                    <button className="delete buttonAction">Deletar</button>
+                  </tr>
+                </>
               );
             }
           )}

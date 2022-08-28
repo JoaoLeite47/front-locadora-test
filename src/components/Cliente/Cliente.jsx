@@ -14,7 +14,7 @@ export default function Cliente() {
 
   return (
     <div className="cliente" id="cliente">
-      <Formulario list={list} />
+      <Formulario list={list}/>
     </div>
   );
 }

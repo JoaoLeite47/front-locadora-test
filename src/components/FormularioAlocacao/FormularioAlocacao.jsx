@@ -40,13 +40,17 @@ export default function FormularioAlocacao({ list = [] }) {
             {list.map(
               ({ cpf_fk, chassi_fk, dt_saida, dt_entrega, id_aloc }) => {
                 return (
-                  <tr key={id_aloc}>
-                    <td>{cpf_fk}</td>
-                    <td>{chassi_fk}</td>
-                    <td>{dt_saida}</td>
-                    <td>{dt_entrega}</td>
-                    <td>{id_aloc}</td>
-                  </tr>
+                  <>
+                    <tr key={id_aloc}>
+                      <td>{cpf_fk}</td>
+                      <td>{chassi_fk}</td>
+                      <td>{dt_saida}</td>
+                      <td>{dt_entrega}</td>
+                      <td>{id_aloc}</td>
+                      <button className="update buttonAction">Atualizar</button>
+                      <button className="delete buttonAction">Deletar</button>
+                    </tr>
+                  </>
                 );
               }
             )}

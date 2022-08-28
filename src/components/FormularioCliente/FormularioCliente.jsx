@@ -1,17 +1,8 @@
 import React, { useState } from "react";
 import "./FormularioCliente.css";
 
-export default function Formulario({ list = [] }) {
-  const [orderColumn, setOrderColumn] = useState("nome");
+export default function Formulario({ list = []}) {
   const [filter, setFilter] = useState("");
-
-  const handleOrder = (columnName) => {
-    setOrderColumn(columnName); // function to order the list by column name
-  };
-
-  list = list.sort((a, b) => {
-    return a[orderColumn] > b[orderColumn] ? -1 : 1; // order for ascending or descending respectively
-  });
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
@@ -31,7 +22,7 @@ export default function Formulario({ list = [] }) {
             <th>RG</th>
             <th>Data de nascimento</th>
             <th>CNH</th>
-            <th onClick={() => handleOrder("nome")}>Nome</th>
+            <th>Nome</th>
             <th>Endereço</th>
             <th>CPF</th>
           </tr>
@@ -39,14 +30,20 @@ export default function Formulario({ list = [] }) {
         <tbody>
           {list.map(({ rg, dt_nascimento, cnh, nome, endereco, cpf }) => {
             return (
-              <tr key={cpf}>
-                <td>{rg}</td>
-                <td>{dt_nascimento}</td>
-                <td>{cnh}</td>
-                <td>{nome}</td>
-                <td>{endereco}</td>
-                <td>{cpf}</td>
-              </tr>
+              <>
+                <tr key={cpf}>
+                  <td>{rg}</td>
+                  <td>{dt_nascimento}</td>
+                  <td>{cnh}</td>
+                  <td>{nome}</td>
+                  <td>{endereco}</td>
+                  <td id="cpf">{cpf}</td>
+                  <button className="update buttonAction">Atualizar</button>
+                  <button className="delete buttonAction">
+                    Deletar
+                  </button>
+                </tr>
+              </>
             );
           })}
         </tbody>

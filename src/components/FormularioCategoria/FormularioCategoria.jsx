@@ -28,7 +28,9 @@ export default function FormularioCategoria({ list = [] }) {
       <table className="table_categoria">
         <thead>
           <tr>
-            <th onClick={() => handleOrder("cod_categ")}>Codigo da categoria</th>
+            <th onClick={() => handleOrder("cod_categ")}>
+              Codigo da categoria
+            </th>
             <th>Descrição</th>
             <th>Valor da diária</th>
           </tr>
@@ -36,11 +38,15 @@ export default function FormularioCategoria({ list = [] }) {
         <tbody>
           {list.map(({ cod_categ, descricao, valor_diaria }) => {
             return (
-              <tr key={cod_categ}>
-                <td>{cod_categ}</td>
-                <td>{descricao}</td>
-                <td>{valor_diaria}</td>
-              </tr>
+              <>
+                <tr key={cod_categ}>
+                  <td>{cod_categ}</td>
+                  <td>{descricao}</td>
+                  <td>{valor_diaria}</td>
+                  <button className="update buttonAction">Atualizar</button>
+                  <button className="delete buttonAction">Deletar</button>
+                </tr>
+              </>
             );
           })}
         </tbody>
