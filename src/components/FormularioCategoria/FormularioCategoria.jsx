@@ -1,17 +1,8 @@
 import React, { useState } from "react";
 import "./FormularioCategoria.css";
 
-export default function FormularioCategoria({ list = [] }) {
-  const [orderColumn, setOrderColumn] = useState("cod_categ");
+export default function FormularioCategoria({ list = [], getCategoria }) {
   const [filter, setFilter] = useState("");
-
-  const handleOrder = (columnCode) => {
-    setOrderColumn(columnCode); // function to order the list by column code
-  };
-
-  list = list.sort((a, b) => {
-    return a[orderColumn] > b[orderColumn] ? -1 : 1; // order for ascending or descending respectively
-  });
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
@@ -22,15 +13,19 @@ export default function FormularioCategoria({ list = [] }) {
     setFilter(e.target.value); // function to filter the list by name
   };
 
+  const deleteCategoria = (cod_categ) => {
+    fetch(`http://localhost:5000/categoria/delete/${cod_categ}`).then((res) => {
+      res.json().then(() => alert("Operação Sucedida!").then(getCategoria()));
+    });
+  };
+
   return (
     <div>
       <input placeholder="Código Example: 4" onChange={handleFilter} />
       <table className="table_categoria">
         <thead>
           <tr>
-            <th onClick={() => handleOrder("cod_categ")}>
-              Codigo da categoria
-            </th>
+            <th>Codigo da categoria</th>
             <th>Descrição</th>
             <th>Valor da diária</th>
           </tr>
@@ -44,7 +39,12 @@ export default function FormularioCategoria({ list = [] }) {
                   <td>{descricao}</td>
                   <td>{valor_diaria}</td>
                   <button className="update buttonAction">Atualizar</button>
-                  <button className="delete buttonAction">Deletar</button>
+                  <button
+                    className="delete buttonAction"
+                    onClick={() => deleteCategoria(cod_categ)}
+                  >
+                    Deletar
+                  </button>
                 </tr>
               </>
             );

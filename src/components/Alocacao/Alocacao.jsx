@@ -6,14 +6,18 @@ import FormularioAlocacao from "../FormularioAlocacao/FormularioAlocacao";
 export default function Alocacao() {
   let [list, setList] = useState([]);
 
-  useEffect(() => {
+  const getAlocacao = () => {
     fetch("http://localhost:5000/alocacoes").then(async (res) =>
       setList(await res.json())
     );
+  };
+
+  useEffect(() => {
+    getAlocacao();
   }, []);
   return (
     <div className="alocacao" id="alocacao">
-      <FormularioAlocacao list={list} />
+      <FormularioAlocacao list={list} getAlocacao={getAlocacao()} />
     </div>
   );
 }
