@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FormularioCliente.css";
 
-export default function Formulario({ list = []}) {
+export default function FormularioCliente({ list = [], getCliente }) {
   const [filter, setFilter] = useState("");
 
   if (filter) {
@@ -11,6 +11,12 @@ export default function Formulario({ list = []}) {
 
   const handleFilter = (e) => {
     setFilter(e.target.value); // function to filter the list by name
+  };
+
+  const deleteCliente = (cpf) => {
+    fetch(`http://localhost:5000/cliente/delete/${cpf}`).then((res) => {
+      res.json().then(() => alert("Operação sucedida").then(getCliente()));
+    });
   };
 
   return (
@@ -39,7 +45,10 @@ export default function Formulario({ list = []}) {
                   <td>{endereco}</td>
                   <td id="cpf">{cpf}</td>
                   <button className="update buttonAction">Atualizar</button>
-                  <button className="delete buttonAction">
+                  <button
+                    className="delete buttonAction"
+                    onClick={() => deleteCliente(cpf)}
+                  >
                     Deletar
                   </button>
                 </tr>

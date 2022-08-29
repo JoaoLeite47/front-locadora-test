@@ -1,20 +1,24 @@
 import "./Cliente.css";
 
 import React, { useState, useEffect } from "react";
-import Formulario from "../FormularioCliente/FormularioCliente";
+import FormularioCliente from "../FormularioCliente/FormularioCliente";
 
 export default function Cliente() {
   let [list, setList] = useState([]);
 
-  useEffect(() => {
+  const getCliente = () => {
     fetch("http://localhost:5000/clientes").then(async (res) =>
       setList(await res.json())
     );
+  };
+
+  useEffect(() => {
+    getCliente();
   }, []);
 
   return (
     <div className="cliente" id="cliente">
-      <Formulario list={list}/>
+      <FormularioCliente list={list} getCliente={getCliente()} />
     </div>
   );
 }
