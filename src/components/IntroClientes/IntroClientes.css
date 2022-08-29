@@ -28,7 +28,7 @@
   font-weight: 300;
   color: white;
 }
-.Intro .introContainer .left button {
+.Intro .introContainer .left .clientesLink {
   margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -40,11 +40,11 @@
   border: none;
   transition: all ease-in 0.1s;
 }
-.Intro .introContainer .left button a {
+.Intro .introContainer .left .clientesLink a {
   color: white;
   text-decoration: none;
 }
-.Intro .introContainer .left button:hover {
+.Intro .introContainer .left .clientesLink:hover {
   background-color: #39ff14;
   color: rgb(121, 120, 120);
 }

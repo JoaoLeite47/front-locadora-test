@@ -1,0 +1,9 @@
+form {
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+form .singup {
+  color: #39ff14;
+}/*# sourceMappingURL=FormModalCliente.css.map */

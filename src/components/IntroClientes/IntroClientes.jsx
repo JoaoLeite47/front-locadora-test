@@ -25,7 +25,7 @@ export default function IntroClientes({ graphic = [] }) {
             <p>
               Nós temos <span>{graphic.length}</span> clientes Incríveis!
             </p>
-            <button>
+            <button className="clientesLink">
               <a href="#cliente">Clientes</a>
             </button>
           </div>
