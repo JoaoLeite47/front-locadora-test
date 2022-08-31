@@ -18,7 +18,7 @@ export default function Carros() {
 
   return (
     <div className="carros" id="carros">
-      <FormularioCarro list={list} getCarros={getCarros()} />
+      <FormularioCarro list={list}  />
     </div>
   );
 }

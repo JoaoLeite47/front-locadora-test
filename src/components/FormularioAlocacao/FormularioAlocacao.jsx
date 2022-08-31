@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FormularioAlocacao.css";
 
-export default function FormularioAlocacao({ list = [], getAlocacao }) {
+export default function FormularioAlocacao({ list = [] }) {
   const [filter, setFilter] = useState("");
 
   if (filter) {
@@ -15,7 +15,7 @@ export default function FormularioAlocacao({ list = [], getAlocacao }) {
 
   const deleteAlocacao = (id_aloc) => {
     fetch(`http://localhost:5000/alocacao/delete/${id_aloc}`).then((res) => {
-      res.json().then(() => alert("Operação sucedida!").then(getAlocacao()));
+      res.json().then(() => alert("Operação sucedida!"));
     });
   };
 
@@ -37,22 +37,24 @@ export default function FormularioAlocacao({ list = [], getAlocacao }) {
             {list.map(
               ({ cpf_fk, chassi_fk, dt_saida, dt_entrega, id_aloc }) => {
                 return (
-                  <>
-                    <tr key={id_aloc}>
-                      <td>{cpf_fk}</td>
-                      <td>{chassi_fk}</td>
-                      <td>{dt_saida}</td>
-                      <td>{dt_entrega}</td>
-                      <td>{id_aloc}</td>
+                  <tr key={id_aloc}>
+                    <td>{cpf_fk}</td>
+                    <td>{chassi_fk}</td>
+                    <td>{dt_saida}</td>
+                    <td>{dt_entrega}</td>
+                    <td>{id_aloc}</td>
+                    <td>
                       <button className="update buttonAction">Atualizar</button>
+                    </td>
+                    <td>
                       <button
                         className="delete buttonAction"
                         onClick={() => deleteAlocacao(id_aloc)}
                       >
                         Deletar
                       </button>
-                    </tr>
-                  </>
+                    </td>
+                  </tr>
                 );
               }
             )}

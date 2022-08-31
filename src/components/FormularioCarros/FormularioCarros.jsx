@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FormularioCarros.css";
 
-export default function FormularioCarros({ list = [], getCarros }) {
+export default function FormularioCarros({ list = [] }) {
   const [filter, setFilter] = useState("");
 
   if (filter) {
@@ -15,7 +15,7 @@ export default function FormularioCarros({ list = [], getCarros }) {
 
   const deleteCarros = (chassi) => {
     fetch(`http://localhost:5000/carro/delete/${chassi}`).then((res) => {
-      res.json().then(() => alert("Operação sucedida").then(getCarros()));
+      res.json().then(() => alert("Operação sucedida"));
     });
   };
 
@@ -38,24 +38,26 @@ export default function FormularioCarros({ list = [], getCarros }) {
           {list.map(
             ({ chassi, cor, modelo, marca, placa, ano, categoria_fk }) => {
               return (
-                <>
-                  <tr key={chassi}>
-                    <td>{chassi}</td>
-                    <td>{cor}</td>
-                    <td>{modelo}</td>
-                    <td>{marca}</td>
-                    <td>{placa}</td>
-                    <td>{ano}</td>
-                    <td>{categoria_fk}</td>
+                <tr key={chassi}>
+                  <td>{chassi}</td>
+                  <td>{cor}</td>
+                  <td>{modelo}</td>
+                  <td>{marca}</td>
+                  <td>{placa}</td>
+                  <td>{ano}</td>
+                  <td>{categoria_fk}</td>
+                  <td>
                     <button className="update buttonAction">Atualizar</button>
+                  </td>
+                  <td>
                     <button
                       className="delete buttonAction"
                       onClick={() => deleteCarros(chassi)}
                     >
                       Deletar
                     </button>
-                  </tr>
-                </>
+                  </td>
+                </tr>
               );
             }
           )}

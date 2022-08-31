@@ -17,7 +17,7 @@ export default function Categoria() {
   }, []);
   return (
     <div className="categoria" id="categoria">
-      <FormularioCategoria list={list} getCategoria={getCategoria()} />
+      <FormularioCategoria list={list} />
     </div>
   );
 }

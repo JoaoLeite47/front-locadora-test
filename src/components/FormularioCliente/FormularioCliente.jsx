@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FormularioCliente.css";
 
-export default function FormularioCliente({ list = [], getCliente }) {
+export default function FormularioCliente({ list = [] }) {
   const [filter, setFilter] = useState("");
 
   if (filter) {
@@ -15,7 +15,7 @@ export default function FormularioCliente({ list = [], getCliente }) {
 
   const deleteCliente = (cpf) => {
     fetch(`http://localhost:5000/cliente/delete/${cpf}`).then((res) => {
-      res.json().then(() => alert("Operação sucedida").then(getCliente()));
+      res.json().then(() => alert("Operação sucedida"));
     });
   };
 
@@ -36,23 +36,25 @@ export default function FormularioCliente({ list = [], getCliente }) {
         <tbody>
           {list.map(({ rg, dt_nascimento, cnh, nome, endereco, cpf }) => {
             return (
-              <>
-                <tr key={cpf}>
-                  <td>{rg}</td>
-                  <td>{dt_nascimento}</td>
-                  <td>{cnh}</td>
-                  <td>{nome}</td>
-                  <td>{endereco}</td>
-                  <td id="cpf">{cpf}</td>
+              <tr key={cpf}>
+                <td>{rg}</td>
+                <td>{dt_nascimento}</td>
+                <td>{cnh}</td>
+                <td>{nome}</td>
+                <td>{endereco}</td>
+                <td id="cpf">{cpf}</td>
+                <td>
                   <button className="update buttonAction">Atualizar</button>
+                </td>
+                <td>
                   <button
                     className="delete buttonAction"
                     onClick={() => deleteCliente(cpf)}
                   >
                     Deletar
                   </button>
-                </tr>
-              </>
+                </td>
+              </tr>
             );
           })}
         </tbody>

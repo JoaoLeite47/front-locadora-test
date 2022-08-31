@@ -1,1 +1,1 @@
-{"version":3,"sources":["FormModalCategoria.scss","FormModalCategoria.css"],"names":[],"mappings":"AAAA;EACI,YAAA;ACCJ","file":"FormModalCategoria.css"}
+{"version":3,"sources":["FormModalCategoria.scss","FormModalCategoria.css","../../Global.scss"],"names":[],"mappings":"AAEA;EACE,gBAAA;EACA,aAAA;EACA,eAAA;EACA,uBAAA;ACDF;ADGE;EACE,cERc;ADOlB","file":"FormModalCategoria.css"}

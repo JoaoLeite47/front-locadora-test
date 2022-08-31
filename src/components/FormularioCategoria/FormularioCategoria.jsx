@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FormularioCategoria.css";
 
-export default function FormularioCategoria({ list = [], getCategoria }) {
+export default function FormularioCategoria({ list = [] }) {
   const [filter, setFilter] = useState("");
 
   if (filter) {
@@ -15,7 +15,7 @@ export default function FormularioCategoria({ list = [], getCategoria }) {
 
   const deleteCategoria = (cod_categ) => {
     fetch(`http://localhost:5000/categoria/delete/${cod_categ}`).then((res) => {
-      res.json().then(() => alert("Operação Sucedida!").then(getCategoria()));
+      res.json().then(() => alert("Operação Sucedida!"));
     });
   };
 
@@ -33,20 +33,22 @@ export default function FormularioCategoria({ list = [], getCategoria }) {
         <tbody>
           {list.map(({ cod_categ, descricao, valor_diaria }) => {
             return (
-              <>
-                <tr key={cod_categ}>
-                  <td>{cod_categ}</td>
-                  <td>{descricao}</td>
-                  <td>{valor_diaria}</td>
+              <tr key={cod_categ}>
+                <td>{cod_categ}</td>
+                <td>{descricao}</td>
+                <td>{valor_diaria}</td>
+                <td>
                   <button className="update buttonAction">Atualizar</button>
+                </td>
+                <td>
                   <button
                     className="delete buttonAction"
                     onClick={() => deleteCategoria(cod_categ)}
                   >
                     Deletar
                   </button>
-                </tr>
-              </>
+                </td>
+              </tr>
             );
           })}
         </tbody>

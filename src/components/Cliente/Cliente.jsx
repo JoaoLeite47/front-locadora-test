@@ -1,5 +1,4 @@
 import "./Cliente.css";
-
 import React, { useState, useEffect } from "react";
 import FormularioCliente from "../FormularioCliente/FormularioCliente";
 
@@ -18,7 +17,7 @@ export default function Cliente() {
 
   return (
     <div className="cliente" id="cliente">
-      <FormularioCliente list={list} getCliente={getCliente()} />
+      <FormularioCliente list={list} />
     </div>
   );
 }

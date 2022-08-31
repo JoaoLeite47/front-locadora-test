@@ -17,7 +17,7 @@ export default function Alocacao() {
   }, []);
   return (
     <div className="alocacao" id="alocacao">
-      <FormularioAlocacao list={list} getAlocacao={getAlocacao()} />
+      <FormularioAlocacao list={list} />
     </div>
   );
 }
