@@ -22,12 +22,8 @@ export default function FormModalCategoria() {
     }
   };
 
-  const teste = () => {
-    console.log(valor_diaria, descricao);
-  };
-
   return (
-    <form onSubmit={submitHandler} onChange={teste}>
+    <form onSubmit={submitHandler}>
       <input
         type="text"
         name="descricao"
