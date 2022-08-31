@@ -10,17 +10,21 @@ export default function FormModalCliente() {
   const [cpf, setCpf] = useState("");
 
   const submitHandler = () => {
-    let data = { rg, dt_nascimento, cnh, nome, endereco, cpf };
-    fetch("http://localhost:5000/cliente/novo", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then(() => {
-      alert("Operação concluida!");
-    });
+    const data = { rg, dt_nascimento, cnh, nome, endereco, cpf };
+    try {
+      fetch("http://localhost:5000/cliente/novo", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then(() => {
+        alert("Operação concluida!");
+      });
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   return (
