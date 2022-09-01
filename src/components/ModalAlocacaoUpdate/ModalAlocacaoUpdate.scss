@@ -1,24 +1,25 @@
 @import "../../Global.scss";
-.categoriaModal {
+
+.alocacaoModalUpdate {
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: 180vh;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .categoriaModalContainer {
+  .alocacaoModalUpdateContainer {
     background-color: $primaryCollor;
     color: black;
     width: 70%;
-    height: 40%;
+    height: 70%;
     border-radius: 20px;
 
-    .categoriaModalClose {
+    .alocacaoModalUpdateClose {
       background-color: transparent;
       border: none;
       outline: none;
@@ -47,10 +48,9 @@
       }
     }
 
-    .categoriaModalContant {
+    .alocacaoModalUpdateContant {
       display: flex;
       justify-content: center;
-      font-size: 50px;
       //Put the form data here
     }
   }

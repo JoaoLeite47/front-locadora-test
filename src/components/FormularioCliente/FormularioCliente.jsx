@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./FormularioCliente.css";
+import ModalClienteUpdate from "../ModalClienteUpdate/ModalClienteUpdate";
 
 export default function FormularioCliente({ list = [] }) {
   const [filter, setFilter] = useState("");
+  const [clienteModalUpdateVisible, setClienteModalUpdateVisible] =
+    useState(false);
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
@@ -44,7 +47,17 @@ export default function FormularioCliente({ list = [] }) {
                 <td>{endereco}</td>
                 <td id="cpf">{cpf}</td>
                 <td>
-                  <button className="update buttonAction">Atualizar</button>
+                  <button
+                    onClick={() => setClienteModalUpdateVisible(true)}
+                    className="update buttonAction"
+                  >
+                    Atualizar
+                  </button>
+                  {clienteModalUpdateVisible ? (
+                    <ModalClienteUpdate
+                      onClose={() => setClienteModalUpdateVisible(false)}
+                    />
+                  ) : null}
                 </td>
                 <td>
                   <button

@@ -1,23 +1,23 @@
-.categoriaModal {
+.clienteModalUpdate {
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: 90vh;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.categoriaModal .categoriaModalContainer {
+.clienteModalUpdate .clienteModalUpdateContainer {
   background-color: rgb(77, 77, 77);
   color: black;
   width: 70%;
-  height: 40%;
+  height: 70%;
   border-radius: 20px;
 }
-.categoriaModal .categoriaModalContainer .categoriaModalClose {
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateClose {
   background-color: transparent;
   border: none;
   outline: none;
@@ -30,21 +30,20 @@
   position: relative;
   align-items: center;
 }
-.categoriaModal .categoriaModalContainer .categoriaModalClose:before, .categoriaModal .categoriaModalContainer .categoriaModalClose:after {
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateClose:before, .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateClose:after {
   content: "";
   position: absolute;
   width: 2.5px;
   height: 24px;
   background-color: red;
 }
-.categoriaModal .categoriaModalContainer .categoriaModalClose:before {
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateClose:before {
   transform: rotate(45deg);
 }
-.categoriaModal .categoriaModalContainer .categoriaModalClose:after {
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateClose:after {
   transform: rotate(-45deg);
 }
-.categoriaModal .categoriaModalContainer .categoriaModalContant {
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant {
   display: flex;
   justify-content: center;
-  font-size: 50px;
-}/*# sourceMappingURL=ModalCategoria.css.map */
+}/*# sourceMappingURL=ModalClienteUpdate.css.map */
