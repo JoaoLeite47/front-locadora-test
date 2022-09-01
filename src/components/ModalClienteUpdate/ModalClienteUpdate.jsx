@@ -1,5 +1,6 @@
 import React from "react";
-import "./ModalClienteUpdate.css"
+import FormModalClienteUpdate from "../FormModalClienteUpdate/FormModalClienteUpdate";
+import "./ModalClienteUpdate.css";
 
 export default function ModalClienteUpdate({ onClose = () => {} }) {
   return (
@@ -7,7 +8,7 @@ export default function ModalClienteUpdate({ onClose = () => {} }) {
       <div className="clienteModalUpdateContainer">
         <button className="clienteModalUpdateClose" onClick={onClose} />
         <div className="clienteModalUpdateContant">
-          {/* <FormModalCliente /> */}
+          <FormModalClienteUpdate />
         </div>
       </div>
     </div>
