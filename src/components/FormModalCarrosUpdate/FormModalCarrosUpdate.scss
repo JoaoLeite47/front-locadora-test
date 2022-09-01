@@ -1,0 +1,16 @@
+.formCarrosUpdate {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    .update {
+      margin-top: 20px;
+      background-color: yellow;
+      transition: all 0.1s ease-in;
+    }
+    .update:hover {
+      background-color: rgb(218, 218, 4);
+    }
+  }
+  

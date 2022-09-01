@@ -1,4 +1,5 @@
 import React from "react";
+import FormModalCarrosUpdate from "../FormModalCarrosUpdate/FormModalCarrosUpdate";
 import "./ModalCarrosUpdate.css";
 
 export default function ModalCarrosUpdate({ onClose = () => {} }) {
@@ -6,7 +7,9 @@ export default function ModalCarrosUpdate({ onClose = () => {} }) {
     <div className="carroModalUpdate">
       <div className="carroModalUpdateContainer">
         <button className="carroModalUpdateClose" onClick={onClose} />
-        <div className="carroModalUpdateContant"></div>
+        <div className="carroModalUpdateContant">
+          <FormModalCarrosUpdate/>
+        </div>
       </div>
     </div>
   );
