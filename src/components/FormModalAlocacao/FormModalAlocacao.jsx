@@ -25,12 +25,8 @@ export default function FormModalAlocacao() {
     }
   };
 
-  const teste = () => {
-    console.log(cpf_fk, chassi_fk, dt_saida, dt_entrega);
-  };
-
   return (
-    <form onSubmit={submitHandler} onChange={teste}>
+    <form onSubmit={submitHandler}>
       <input
         type="text"
         name="cpf_fk"
