@@ -14,7 +14,7 @@
   background-color: rgb(77, 77, 77);
   color: black;
   width: 70%;
-  height: 70%;
+  height: 80%;
   border-radius: 20px;
 }
 .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateClose {
@@ -46,4 +46,22 @@
 .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .SearchButton {
+  padding: 10px;
+  color: yellow;
+}
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .formUpdateCliente {
+  margin-top: 15px;
+}
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .formUpdateCliente .update {
+  color: yellow;
 }/*# sourceMappingURL=ModalClienteUpdate.css.map */

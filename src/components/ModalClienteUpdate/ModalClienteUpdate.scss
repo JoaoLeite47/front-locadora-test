@@ -15,7 +15,7 @@
     background-color: $primaryCollor;
     color: black;
     width: 70%;
-    height: 70%;
+    height: 80%;
     border-radius: 20px;
 
     .clienteModalUpdateClose {
@@ -50,6 +50,26 @@
     .clienteModalUpdateContant {
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .searchColumn {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .SearchButton {
+          padding: 10px;
+          color: yellow;
+        }
+      }
+      .formUpdateCliente {
+        margin-top: 15px;
+        .update {
+          color: yellow;
+        }
+      }
     }
   }
 }
