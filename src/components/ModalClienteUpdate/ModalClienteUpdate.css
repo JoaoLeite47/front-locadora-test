@@ -45,17 +45,20 @@
 }
 .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn {
-  width: 50%;
+  width: 60%;
+}
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .searchForm {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .SearchButton {
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .searchForm .searchBar {
+  width: 50%;
+}
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .searchForm .SearchButton {
   padding: 10px;
   color: yellow;
 }

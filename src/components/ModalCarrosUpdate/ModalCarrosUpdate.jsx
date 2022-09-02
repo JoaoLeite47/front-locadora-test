@@ -9,14 +9,16 @@ export default function ModalCarrosUpdate({ onClose = () => {} }) {
         <button className="carroModalUpdateClose" onClick={onClose} />
         <div className="carroModalUpdateContant">
           <div className="searchColumn">
-            <input
-              type="text"
-              className="searchBar"
-              placeholder="digite o chassi aqui..."
-            />
-            <button className="SearchButton">
-              <ImSearch size="1.5em" />
-            </button>
+            <form className="searchForm" action="">
+              <input
+                type="text"
+                className="searchBar"
+                placeholder="digite o cpf aqui..."
+              />
+              <button className="SearchButton">
+                <ImSearch size="1.5em" />
+              </button>
+            </form>
           </div>
           <div className="formUpdateCarro">
             <form>

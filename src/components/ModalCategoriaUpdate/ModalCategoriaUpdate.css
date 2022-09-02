@@ -45,17 +45,20 @@
 }
 .categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .searchColumn {
-  width: 40%;
+  width: 60%;
+}
+.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .searchColumn .searchForm {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .searchColumn .SearchButton {
+.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .searchColumn .searchForm .searchBar {
+  width: 50%;
+}
+.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .searchColumn .searchForm .SearchButton {
   padding: 10px;
   color: yellow;
 }

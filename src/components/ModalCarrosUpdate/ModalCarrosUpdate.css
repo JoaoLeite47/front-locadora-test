@@ -45,17 +45,20 @@
 }
 .carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .searchColumn {
-  width: 50%;
+  width: 60%;
+}
+.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .searchColumn .searchForm {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .searchColumn .SearchButton {
+.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .searchColumn .searchForm .searchBar {
+  width: 50%;
+}
+.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .searchColumn .searchForm .SearchButton {
   padding: 10px;
   color: yellow;
 }

@@ -45,17 +45,20 @@
 }
 .alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .searchColumn {
-  width: 50%;
+  width: 60%;
+}
+.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .searchColumn .searchForm {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .searchColumn .SearchButton {
+.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .searchColumn .searchForm .searchBar {
+  width: 50%;
+}
+.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .searchColumn .searchForm .SearchButton {
   padding: 10px;
   color: yellow;
 }

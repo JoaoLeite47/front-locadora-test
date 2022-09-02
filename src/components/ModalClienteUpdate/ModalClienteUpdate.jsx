@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ModalClienteUpdate.css";
 import { ImSearch } from "react-icons/im";
 export default function ModalClienteUpdate({ onClose = () => {} }) {
+
   return (
     <div className="clienteModalUpdate">
       <div className="clienteModalUpdateContainer">
         <button className="clienteModalUpdateClose" onClick={onClose} />
         <div className="clienteModalUpdateContant">
           <div className="searchColumn">
-            <input
-              type="text"
-              className="searchBar"
-              placeholder="digite o cpf aqui..."
-            />
-            <button className="SearchButton">
-              <ImSearch size="1.5em" />
-            </button>
+            <form className="searchForm" action="">
+              <input
+                type="text"
+                className="searchBar"
+                placeholder="digite o cpf aqui..."
+              />
+              <button className="SearchButton">
+                <ImSearch size="1.5em" />
+              </button>
+            </form>
           </div>
           <div className="formUpdateCliente">
             <form>

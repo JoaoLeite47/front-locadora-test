@@ -50,19 +50,24 @@
 
     .categoriaModalUpdateContant {
       display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
 
       .searchColumn {
-        width: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 60%;
 
-        .SearchButton {
-          padding: 10px;
-          color: yellow;
+        .searchForm {
+          display: flex;
+          justify-content: center;
+
+          .searchBar {
+            width: 50%;
+          }
+          
+          .SearchButton {
+            padding: 10px;
+            color: yellow;
+          }
         }
       }
       .formUpdateCategoria {
