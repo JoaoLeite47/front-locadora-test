@@ -14,7 +14,7 @@
   background-color: rgb(77, 77, 77);
   color: black;
   width: 70%;
-  height: 80%;
+  height: 90%;
   border-radius: 20px;
 }
 .carroModalUpdate .carroModalUpdateContainer .carroModalUpdateClose {
@@ -46,4 +46,22 @@
 .carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .searchColumn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .searchColumn .SearchButton {
+  padding: 10px;
+  color: yellow;
+}
+.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .formUpdateCarro {
+  margin-top: 15px;
+}
+.carroModalUpdate .carroModalUpdateContainer .carroModalUpdateContant .formUpdateCarro .update {
+  color: yellow;
 }/*# sourceMappingURL=ModalCarrosUpdate.css.map */
