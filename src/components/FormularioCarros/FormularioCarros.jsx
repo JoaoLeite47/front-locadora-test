@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./FormularioCarros.css";
-import ModalCarrosUpdate from "../ModalCarrosUpdate/ModalCarrosUpdate";
 
 export default function FormularioCarros({ list = [] }) {
   const [filter, setFilter] = useState("");
-  const [carroModalUpdateVisible, setCarroModalUpdateVisible] = useState(false);
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
@@ -48,19 +46,6 @@ export default function FormularioCarros({ list = [] }) {
                   <td>{placa}</td>
                   <td>{ano}</td>
                   <td>{categoria_fk}</td>
-                  <td>
-                    <button
-                      onClick={() => setCarroModalUpdateVisible(true)}
-                      className="update buttonAction"
-                    >
-                      Atualizar
-                    </button>
-                    {carroModalUpdateVisible ? (
-                    <ModalCarrosUpdate
-                      onClose={() => setCarroModalUpdateVisible(false)}
-                    />
-                  ) : null}
-                  </td>
                   <td>
                     <button
                       className="delete buttonAction"

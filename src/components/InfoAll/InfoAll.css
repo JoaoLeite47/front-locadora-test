@@ -20,8 +20,41 @@
 }
 .Introsecond .itensContainerSecond {
   width: 52%;
-  height: 50vh;
+  height: 30vh;
   background-color: rgb(77, 77, 77);
   margin-left: 15px;
   border-radius: 10px;
+}
+.Introsecond .itensContainerSecond .toptitleUpdate {
+  display: flex;
+  justify-content: center;
+}
+.Introsecond .itensContainerSecond .toptitleUpdate p {
+  font-weight: 400;
+  font-size: 40px;
+  color: yellow;
+}
+.Introsecond .itensContainerSecond .Update {
+  display: flex;
+  justify-content: space-around;
+}
+.Introsecond .itensContainerSecond .Update div button {
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgb(121, 120, 120);
+  cursor: pointer;
+  border: none;
+  transition: all ease-in 0.2s;
+}
+.Introsecond .itensContainerSecond .Update div button p {
+  color: white;
+}
+.Introsecond .itensContainerSecond .Update div button .update_icon {
+  color: yellow;
+}
+.Introsecond .itensContainerSecond .Update div button:hover {
+  background-color: rgb(77, 77, 77);
 }/*# sourceMappingURL=InfoAll.css.map */

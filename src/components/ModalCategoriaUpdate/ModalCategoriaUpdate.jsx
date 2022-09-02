@@ -1,5 +1,4 @@
 import React from "react";
-import FormModalCategoriaUpdate from "../FormModalCategoriaUpdate/FormModalCategoriaUpdate";
 import "./ModalCategoriaUpdate.css";
 
 export default function ModalCategoriaUpdate({ onClose = () => {} }) {
@@ -8,7 +7,6 @@ export default function ModalCategoriaUpdate({ onClose = () => {} }) {
       <div className="categoriaModalUpdateContainer">
         <button className="categoriaModalUpdateClose" onClick={onClose} />
         <div className="categoriaModalUpdateContant">
-          <FormModalCategoriaUpdate />
         </div>
       </div>
     </div>
