@@ -16,7 +16,7 @@
     background-color: $primaryCollor;
     color: black;
     width: 70%;
-    height: 40%;
+    height: 50%;
     border-radius: 20px;
 
     .categoriaModalUpdateClose {
@@ -51,7 +51,26 @@
     .categoriaModalUpdateContant {
       display: flex;
       justify-content: center;
-      //Put the form data here
+      align-items: center;
+      flex-direction: column;
+
+      .searchColumn {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .SearchButton {
+          padding: 10px;
+          color: yellow;
+        }
+      }
+      .formUpdateCategoria {
+        margin-top: 15px;
+        .update {
+          color: yellow;
+        }
+      }
     }
   }
 }

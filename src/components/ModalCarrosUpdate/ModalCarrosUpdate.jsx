@@ -12,7 +12,7 @@ export default function ModalCarrosUpdate({ onClose = () => {} }) {
             <input
               type="text"
               className="searchBar"
-              placeholder="digite o cpf aqui..."
+              placeholder="digite o chassi aqui..."
             />
             <button className="SearchButton">
               <ImSearch size="1.5em" />

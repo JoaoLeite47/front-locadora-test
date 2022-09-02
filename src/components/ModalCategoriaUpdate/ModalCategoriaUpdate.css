@@ -14,7 +14,7 @@
   background-color: rgb(77, 77, 77);
   color: black;
   width: 70%;
-  height: 40%;
+  height: 50%;
   border-radius: 20px;
 }
 .categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateClose {
@@ -46,4 +46,22 @@
 .categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .searchColumn {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .searchColumn .SearchButton {
+  padding: 10px;
+  color: yellow;
+}
+.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .formUpdateCategoria {
+  margin-top: 15px;
+}
+.categoriaModalUpdate .categoriaModalUpdateContainer .categoriaModalUpdateContant .formUpdateCategoria .update {
+  color: yellow;
 }/*# sourceMappingURL=ModalCategoriaUpdate.css.map */
