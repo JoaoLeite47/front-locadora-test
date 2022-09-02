@@ -14,7 +14,7 @@
   background-color: rgb(77, 77, 77);
   color: black;
   width: 70%;
-  height: 60%;
+  height: 70%;
   border-radius: 20px;
 }
 .alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateClose {
@@ -46,4 +46,22 @@
 .alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .searchColumn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .searchColumn .SearchButton {
+  padding: 10px;
+  color: yellow;
+}
+.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .formUpdateAlocacao {
+  margin-top: 15px;
+}
+.alocacaoModalUpdate .alocacaoModalUpdateContainer .alocacaoModalUpdateContant .formUpdateAlocacao .update {
+  color: yellow;
 }/*# sourceMappingURL=ModalAlocacaoUpdate.css.map */

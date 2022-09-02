@@ -16,7 +16,7 @@
     background-color: $primaryCollor;
     color: black;
     width: 70%;
-    height: 60%;
+    height: 70%;
     border-radius: 20px;
 
     .alocacaoModalUpdateClose {
@@ -51,7 +51,26 @@
     .alocacaoModalUpdateContant {
       display: flex;
       justify-content: center;
-      //Put the form data here
+      align-items: center;
+      flex-direction: column;
+
+      .searchColumn {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .SearchButton {
+          padding: 10px;
+          color: yellow;
+        }
+      }
+      .formUpdateAlocacao {
+        margin-top: 15px;
+        .update {
+          color: yellow;
+        }
+      }
     }
   }
 }
