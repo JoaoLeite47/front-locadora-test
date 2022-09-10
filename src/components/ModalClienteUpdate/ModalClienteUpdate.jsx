@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./ModalClienteUpdate.css";
 export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
   const [Cliente, setCliente] = useState([]);
+  const [rg, setRg] = useState("");
+  const [dt_nascimento, setDt_nascimento] = useState("");
+  const [cnh, setCnh] = useState("");
+  const [nome, setNome] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [cpf, setCpf] = useState("");
 
   const getClienteUnique = () => {
     fetch(`http://localhost:5000/cliente/${cpfBase}`).then(async (res) =>
@@ -13,10 +19,23 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
     getClienteUnique();
   }, []);
 
-  const teste = (rg) => {
-    const data = {rg}
-    console.log(data)
-  }
+  const submitHandler = () => {
+    const data = { rg, dt_nascimento, cnh, nome, endereco, cpf };
+    try {
+      fetch(`http://localhost:5000/cliente/update/${cpfBase}`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then(() => {
+        alert("Operação concluida!");
+      });
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
 
   return (
     <div className="clienteModalUpdate">
@@ -26,13 +45,13 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
           {Cliente.map(({ rg, dt_nascimento, cnh, nome, endereco, cpf }) => {
             return (
               <div className="formUpdateCliente">
-                <form>
+                <form onSubmit={submitHandler}>
                   <input
                     type="text"
                     name="rg"
                     placeholder="Rg"
                     Value={rg}
-                    onChange={(e) => teste(e.target.value)}
+                    onChange={(e) => setRg(e.target.value)}
                     required
                   />
                   <input
@@ -40,6 +59,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
                     name="dt_nascimento"
                     placeholder="Data de Nascimento"
                     Value={dt_nascimento}
+                    onChange={(e) => setDt_nascimento(e.target.value)}
                     required
                   />
                   <input
@@ -47,6 +67,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
                     name="cnh"
                     placeholder="Cnh"
                     Value={cnh}
+                    onChange={(e) => setCnh(e.target.value)}
                     required
                   />
                   <input
@@ -54,6 +75,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
                     name="nome"
                     placeholder="Nome"
                     Value={nome}
+                    onChange={(e) => setNome(e.target.value)}
                     required
                   />
                   <input
@@ -61,6 +83,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
                     name="endereco"
                     placeholder="Endereço"
                     Value={endereco}
+                    onChange={(e) => setEndereco(e.target.value)}
                     required
                   />
                   <input
@@ -68,6 +91,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
                     name="cpf"
                     placeholder="Cpf"
                     Value={cpf}
+                    onChange={(e) => setCpf(e.target.value)}
                     key={cpf}
                     required
                   />
