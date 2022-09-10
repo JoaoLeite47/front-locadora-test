@@ -1,13 +1,21 @@
 import React, { useState } from "react";
+import ModalCarrosUpdate from "../ModalCarrosUpdate/ModalCarrosUpdate";
 import "./FormularioCarros.css";
 
 export default function FormularioCarros({ list = [] }) {
   const [filter, setFilter] = useState("");
+  const [carroUpdateModalVisible, setCarroUpdateModalVisible] = useState(false);
+  const [chassiBase, setChassiBase] = useState("");
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
     list = list.filter((item) => exp.test(item.chassi));
   }
+
+  const handleModal = (chassi) => {
+    setCarroUpdateModalVisible(true);
+    setChassiBase(chassi);
+  };
 
   const handleFilter = (e) => {
     setFilter(e.target.value); // function to filter the list by name
@@ -53,6 +61,20 @@ export default function FormularioCarros({ list = [] }) {
                     >
                       Deletar
                     </button>
+                  </td>
+                  <td>
+                    <button
+                      className="update buttonAction"
+                      onClick={() => handleModal(chassi)}
+                    >
+                      Atualizar
+                    </button>
+                    {carroUpdateModalVisible ? (
+                      <ModalCarrosUpdate
+                        onClose={() => setCarroUpdateModalVisible(false)}
+                        chassiBase={chassiBase}
+                      />
+                    ) : null}
                   </td>
                 </tr>
               );

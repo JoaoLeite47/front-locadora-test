@@ -19,55 +19,14 @@
       justify-content: center;
       margin: 10px;
       padding: 20px;
-
-      .InfoColumnsItens {
-      }
     }
   }
 
   .itensContainerSecond {
     width: 52%;
-    height: 30vh;
+    height: 50vh;
     background-color: $primaryCollor;
     margin-left: 15px;
     border-radius: 10px;
-
-    .toptitleUpdate {
-      display: flex;
-      justify-content: center;
-      p {
-        font-weight: 400;
-        font-size: 40px;
-        color: yellow;
-      }
-    }
-    .Update {
-      display: flex;
-      justify-content: space-around;
-      div {
-        button {
-          border-radius: 10px;
-          padding: 15px;
-          margin-top: 10px;
-          margin-left: 20px;
-          margin-right: 20px;
-          background-color: $backgroundCollor;
-          cursor: pointer;
-          border: none;
-          transition: all ease-in 0.2s;
-
-          p {
-            color: white;
-          }
-
-          .update_icon {
-            color: yellow;
-          }
-        }
-        button:hover {
-          background-color: $primaryCollor;
-        }
-      }
-    }
   }
 }

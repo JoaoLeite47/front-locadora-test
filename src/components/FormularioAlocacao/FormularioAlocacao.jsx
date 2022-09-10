@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import ModalAlocacaoUpdate from "../ModalAlocacaoUpdate/ModalAlocacaoUpdate";
 import "./FormularioAlocacao.css";
 
 export default function FormularioAlocacao({ list = [] }) {
   const [filter, setFilter] = useState("");
+  const [alocacaoUpdateModalVisible, setAlocacaoUpdateModalVisible] =
+    useState(false);
+  const [id_alocBase, setId_alocBase] = useState("");
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
@@ -11,6 +15,11 @@ export default function FormularioAlocacao({ list = [] }) {
 
   const handleFilter = (e) => {
     setFilter(e.target.value); // function to filter the list by name
+  };
+
+  const handleModal = (id_aloc) => {
+    setAlocacaoUpdateModalVisible(true);
+    setId_alocBase(id_aloc);
   };
 
   const deleteAlocacao = (id_aloc) => {
@@ -50,6 +59,20 @@ export default function FormularioAlocacao({ list = [] }) {
                       >
                         Deletar
                       </button>
+                    </td>
+                    <td>
+                      <button
+                        className="update buttonAction"
+                        onClick={() => handleModal(id_aloc)}
+                      >
+                        Atualizar
+                      </button>
+                      {alocacaoUpdateModalVisible ? (
+                        <ModalAlocacaoUpdate
+                          onClose={() => setAlocacaoUpdateModalVisible(false)}
+                          id_alocBase={id_alocBase}
+                        />
+                      ) : null}
                     </td>
                   </tr>
                 );

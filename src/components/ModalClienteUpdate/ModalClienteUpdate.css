@@ -2,7 +2,7 @@
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
@@ -14,7 +14,7 @@
   background-color: rgb(77, 77, 77);
   color: black;
   width: 70%;
-  height: 80%;
+  height: 70%;
   border-radius: 20px;
 }
 .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateClose {
@@ -48,23 +48,14 @@
   align-items: center;
   flex-direction: column;
 }
-.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn {
-  width: 60%;
-}
-.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .searchForm {
-  display: flex;
-  justify-content: center;
-}
-.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .searchForm .searchBar {
-  width: 50%;
-}
-.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .searchColumn .searchForm .SearchButton {
-  padding: 10px;
-  color: yellow;
-}
 .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .formUpdateCliente {
   margin-top: 15px;
 }
 .clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .formUpdateCliente .update {
-  color: yellow;
+  margin-top: 10px;
+  background-color: yellow;
+  transition: all 0.1s ease-in;
+}
+.clienteModalUpdate .clienteModalUpdateContainer .clienteModalUpdateContant .formUpdateCliente .update:hover {
+  background-color: rgb(216, 216, 5);
 }/*# sourceMappingURL=ModalClienteUpdate.css.map */

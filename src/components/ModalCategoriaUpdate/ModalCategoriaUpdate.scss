@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: 400%;
   left: 0;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
@@ -16,7 +16,7 @@
     background-color: $primaryCollor;
     color: black;
     width: 70%;
-    height: 50%;
+    height: 40%;
     border-radius: 20px;
 
     .categoriaModalUpdateClose {
@@ -53,27 +53,15 @@
       align-items: center;
       flex-direction: column;
 
-      .searchColumn {
-        width: 60%;
-
-        .searchForm {
-          display: flex;
-          justify-content: center;
-
-          .searchBar {
-            width: 50%;
-          }
-          
-          .SearchButton {
-            padding: 10px;
-            color: yellow;
-          }
-        }
-      }
       .formUpdateCategoria {
         margin-top: 15px;
         .update {
-          color: yellow;
+          margin-top: 10px;
+          background-color: yellow;
+          transition: all 0.1s ease-in;
+        }
+        .update:hover {
+          background-color: rgb(216, 216, 5);
         }
       }
     }

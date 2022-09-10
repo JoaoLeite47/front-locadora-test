@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./FormularioCategoria.css";
+import ModalCategoriaUpdate from "../ModalCategoriaUpdate/ModalCategoriaUpdate";
 
 export default function FormularioCategoria({ list = [] }) {
   const [filter, setFilter] = useState("");
+  const [categoriaUpdateModalVisible, setCategoriaUpdateModalVisible] =
+    useState(false);
+  const [cod_CategBase, setCod_CategBase] = useState("");
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
@@ -11,6 +15,11 @@ export default function FormularioCategoria({ list = [] }) {
 
   const handleFilter = (e) => {
     setFilter(e.target.value); // function to filter the list by name
+  };
+
+  const handleModal = (cod_categ) => {
+    setCategoriaUpdateModalVisible(true);
+    setCod_CategBase(cod_categ);
   };
 
   const deleteCategoria = (cod_categ) => {
@@ -44,6 +53,20 @@ export default function FormularioCategoria({ list = [] }) {
                   >
                     Deletar
                   </button>
+                </td>
+                <td>
+                  <button
+                    className="update buttonAction"
+                    onClick={() => handleModal(cod_categ)}
+                  >
+                    Atualizar
+                  </button>
+                  {categoriaUpdateModalVisible ? (
+                    <ModalCategoriaUpdate
+                      onClose={() => setCategoriaUpdateModalVisible(false)}
+                      cod_CategBase={cod_CategBase}
+                    />
+                  ) : null}
                 </td>
               </tr>
             );

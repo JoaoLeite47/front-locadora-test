@@ -1,14 +1,23 @@
 import React, { useState } from "react";
+import ModalClienteUpdate from "../ModalClienteUpdate/ModalClienteUpdate";
 import "./FormularioCliente.css";
 
 export default function FormularioCliente({ list = [] }) {
   const [filter, setFilter] = useState("");
+  const [clienteUpdateModalVisible, setClienteUpdateModalVisible] =
+    useState(false);
+  const [cpfBase, setCpfBase] = useState("");
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
     list = list.filter((item) => exp.test(item.cpf));
   }
 
+  const handleModal = (cpf) => {
+    setClienteUpdateModalVisible(true);
+    setCpfBase(cpf);
+  };
+  
   const handleFilter = (e) => {
     setFilter(e.target.value); // function to filter the list by name
   };
@@ -18,6 +27,7 @@ export default function FormularioCliente({ list = [] }) {
       res.json().then(() => alert("Operação sucedida"));
     });
   };
+
   return (
     <div>
       <input placeholder="CPF Example: 56558215225" onChange={handleFilter} />
@@ -49,6 +59,20 @@ export default function FormularioCliente({ list = [] }) {
                   >
                     Deletar
                   </button>
+                </td>
+                <td>
+                  <button
+                    className="update buttonAction"
+                    onClick={() => handleModal(cpf)}
+                  >
+                    Atualizar
+                  </button>
+                  {clienteUpdateModalVisible ? (
+                    <ModalClienteUpdate
+                      onClose={() => setClienteUpdateModalVisible(false)}
+                      cpfBase={cpfBase}
+                    />
+                  ) : null}
                 </td>
               </tr>
             );
