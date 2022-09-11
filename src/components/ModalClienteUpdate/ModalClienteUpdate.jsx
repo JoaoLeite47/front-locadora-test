@@ -7,7 +7,6 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
   const [cnh, setCnh] = useState("");
   const [nome, setNome] = useState("");
   const [endereco, setEndereco] = useState("");
-  const [cpf, setCpf] = useState("");
 
   const getClienteUnique = () => {
     fetch(`http://localhost:5000/cliente/${cpfBase}`).then(async (res) =>
@@ -20,7 +19,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
   }, []);
 
   const submitHandler = () => {
-    const data = { rg, dt_nascimento, cnh, nome, endereco, cpf };
+    const data = { rg, dt_nascimento, cnh, nome, endereco };
     try {
       fetch(`http://localhost:5000/cliente/update/${cpfBase}`, {
         method: "POST",
@@ -45,7 +44,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
           {Cliente.map(({ rg, dt_nascimento, cnh, nome, endereco, cpf }) => {
             return (
               <div className="formUpdateCliente">
-                <form onSubmit={submitHandler}>
+                <form onSubmit={submitHandler} key={cpf}>
                   <input
                     type="text"
                     name="rg"
@@ -84,15 +83,6 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
                     placeholder="Endereço"
                     Value={endereco}
                     onChange={(e) => setEndereco(e.target.value)}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="cpf"
-                    placeholder="Cpf"
-                    Value={cpf}
-                    onChange={(e) => setCpf(e.target.value)}
-                    key={cpf}
                     required
                   />
                   <button className="update" type="submit">
