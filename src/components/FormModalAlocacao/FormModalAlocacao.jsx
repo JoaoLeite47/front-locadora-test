@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import "./FormModalAlocacao.css";
 
 export default function FormModalAlocacao() {
-  const [cpf_fk, setCpf_fk] = useState("");
-  const [chassi_fk, setChassi_fk] = useState("");
-  const [dt_saida, setDt_saida] = useState("");
-  const [dt_entrega, setDt_entrega] = useState("");
+  const [Newcpf_fk, setNewCpf_fk] = useState("");
+  const [Newchassi_fk, setNewChassi_fk] = useState("");
+  const [Newdt_saida, setNewDt_saida] = useState("");
+  const [Newdt_entrega, setNewDt_entrega] = useState("");
 
   const submitHandler = () => {
-    const data = { cpf_fk, chassi_fk, dt_saida, dt_entrega };
+    const dataCreateAlocacao = {
+      cpf_fk: Newcpf_fk,
+      chassi_fk: Newchassi_fk,
+      dt_saida: Newdt_saida,
+      dt_entrega: Newdt_entrega,
+    };
     try {
       fetch("http://localhost:5000/alocacao/novo", {
         method: "POST",
@@ -16,7 +21,7 @@ export default function FormModalAlocacao() {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(dataCreateAlocacao),
       }).then(() => {
         alert("Operação concluida!");
       });
@@ -30,9 +35,9 @@ export default function FormModalAlocacao() {
       <input
         type="text"
         name="cpf_fk"
-        value={cpf_fk}
+        value={Newcpf_fk}
         onChange={(e) => {
-          setCpf_fk(e.target.value);
+          setNewCpf_fk(e.target.value);
         }}
         placeholder="Cpf"
         required
@@ -40,9 +45,9 @@ export default function FormModalAlocacao() {
       <input
         type="text"
         name="chassi_fk"
-        value={chassi_fk}
+        value={Newchassi_fk}
         onChange={(e) => {
-          setChassi_fk(e.target.value);
+          setNewChassi_fk(e.target.value);
         }}
         placeholder="Chassi"
         required
@@ -50,9 +55,9 @@ export default function FormModalAlocacao() {
       <input
         type="date"
         name="dt_saida"
-        value={dt_saida}
+        value={Newdt_saida}
         onChange={(e) => {
-          setDt_saida(e.target.value);
+          setNewDt_saida(e.target.value);
         }}
         placeholder="Data de saída"
         required
@@ -60,9 +65,9 @@ export default function FormModalAlocacao() {
       <input
         type="date"
         name="dt_entrega"
-        value={dt_entrega}
+        value={Newdt_entrega}
         onChange={(e) => {
-          setDt_entrega(e.target.value);
+          setNewDt_entrega(e.target.value);
         }}
         placeholder="Data de entrega"
         required

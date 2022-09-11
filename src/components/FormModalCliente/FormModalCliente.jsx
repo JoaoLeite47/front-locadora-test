@@ -2,15 +2,22 @@ import React, { useState } from "react";
 import "./FormModalCliente.css";
 
 export default function FormModalCliente() {
-  const [rg, setRg] = useState("");
-  const [dt_nascimento, setDt_nascimento] = useState("");
-  const [cnh, setCnh] = useState("");
-  const [nome, setNome] = useState("");
-  const [endereco, setEndereco] = useState("");
-  const [cpf, setCpf] = useState("");
+  const [newRg, setNewRg] = useState("");
+  const [newDt_nascimento, setNewDt_nascimento] = useState("");
+  const [newCnh, setNewCnh] = useState("");
+  const [newNome, setNewNome] = useState("");
+  const [newEndereco, setNewEndereco] = useState("");
+  const [newCpf, setNewCpf] = useState("");
 
-  const submitHandler = () => {
-    const data = { rg, dt_nascimento, cnh, nome, endereco, cpf };
+  const submitHandlerCreate = () => {
+    const dataCreateClientes = {
+      rg: newRg,
+      dt_nascimento: newDt_nascimento,
+      cnh: newCnh,
+      nome: newNome,
+      endereco: newEndereco,
+      cpf: newCpf,
+    };
     try {
       fetch("http://localhost:5000/cliente/novo", {
         method: "POST",
@@ -18,7 +25,7 @@ export default function FormModalCliente() {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(dataCreateClientes),
       }).then(() => {
         alert("Operação concluida!");
       });
@@ -28,13 +35,13 @@ export default function FormModalCliente() {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandlerCreate}>
       <input
         type="text"
         name="rg"
-        value={rg}
+        value={newRg}
         onChange={(e) => {
-          setRg(e.target.value);
+          setNewRg(e.target.value);
         }}
         placeholder="RG"
         required
@@ -42,9 +49,9 @@ export default function FormModalCliente() {
       <input
         type="date"
         name="dt_nascimento"
-        value={dt_nascimento}
+        value={newDt_nascimento}
         onChange={(e) => {
-          setDt_nascimento(e.target.value);
+          setNewDt_nascimento(e.target.value);
         }}
         placeholder="Data de Nascimento"
         required
@@ -52,9 +59,9 @@ export default function FormModalCliente() {
       <input
         type="text"
         name="cnh"
-        value={cnh}
+        value={newCnh}
         onChange={(e) => {
-          setCnh(e.target.value);
+          setNewCnh(e.target.value);
         }}
         placeholder="CNH"
         required
@@ -62,9 +69,9 @@ export default function FormModalCliente() {
       <input
         type="text"
         name="nome"
-        value={nome}
+        value={newNome}
         onChange={(e) => {
-          setNome(e.target.value);
+          setNewNome(e.target.value);
         }}
         placeholder="Nome"
         required
@@ -72,9 +79,9 @@ export default function FormModalCliente() {
       <input
         type="text"
         name="endereco"
-        value={endereco}
+        value={newEndereco}
         onChange={(e) => {
-          setEndereco(e.target.value);
+          setNewEndereco(e.target.value);
         }}
         placeholder="Endereço"
         required
@@ -82,9 +89,9 @@ export default function FormModalCliente() {
       <input
         type="text"
         name="cpf"
-        value={cpf}
+        value={newCpf}
         onChange={(e) => {
-          setCpf(e.target.value);
+          setNewCpf(e.target.value);
         }}
         placeholder="Cpf"
         required

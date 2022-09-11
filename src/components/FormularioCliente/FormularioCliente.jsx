@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import ModalClienteDelete from "../ModalClienteDelete/ModalClienteDelete";
 import ModalClienteUpdate from "../ModalClienteUpdate/ModalClienteUpdate";
 import "./FormularioCliente.css";
 
 export default function FormularioCliente({ list = [] }) {
   const [filter, setFilter] = useState("");
   const [clienteUpdateModalVisible, setClienteUpdateModalVisible] =
+    useState(false);
+  const [clienteDeleteModalVisible, setClienteDeleteModalVisible] =
     useState(false);
   const [cpfBase, setCpfBase] = useState("");
 
@@ -13,19 +16,18 @@ export default function FormularioCliente({ list = [] }) {
     list = list.filter((item) => exp.test(item.cpf));
   }
 
-  const handleModal = (cpf) => {
+  const handleModalUpdate = (cpf) => {
     setClienteUpdateModalVisible(true);
     setCpfBase(cpf);
   };
-  
-  const handleFilter = (e) => {
-    setFilter(e.target.value); // function to filter the list by name
+
+  const handleModalDelete = (cpf) => {
+    setClienteDeleteModalVisible(true);
+    setCpfBase(cpf);
   };
 
-  const deleteCliente = (cpf) => {
-    fetch(`http://localhost:5000/cliente/delete/${cpf}`).then((res) => {
-      res.json().then(() => alert("Operação sucedida"));
-    });
+  const handleFilter = (e) => {
+    setFilter(e.target.value); // function to filter the list by name
   };
 
   return (
@@ -55,15 +57,21 @@ export default function FormularioCliente({ list = [] }) {
                 <td>
                   <button
                     className="delete buttonAction"
-                    onClick={() => deleteCliente(cpf)}
+                    onClick={() => handleModalDelete(cpf)}
                   >
                     Deletar
                   </button>
+                  {clienteDeleteModalVisible ? (
+                    <ModalClienteDelete
+                      onClose={() => setClienteDeleteModalVisible(false)}
+                      cpfBase={cpfBase}
+                    />
+                  ) : null}
                 </td>
                 <td>
                   <button
                     className="update buttonAction"
-                    onClick={() => handleModal(cpf)}
+                    onClick={() => handleModalUpdate(cpf)}
                   >
                     Atualizar
                   </button>

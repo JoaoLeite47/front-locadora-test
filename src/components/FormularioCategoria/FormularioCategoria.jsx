@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "./FormularioCategoria.css";
 import ModalCategoriaUpdate from "../ModalCategoriaUpdate/ModalCategoriaUpdate";
+import ModalCategoriaDelete from "../ModalCategoriaDelete/ModalCategoriaDelete";
 
 export default function FormularioCategoria({ list = [] }) {
   const [filter, setFilter] = useState("");
   const [categoriaUpdateModalVisible, setCategoriaUpdateModalVisible] =
+    useState(false);
+  const [categoriaDeleteModalVisible, setCategoriaDeleteModalVisible] =
     useState(false);
   const [cod_CategBase, setCod_CategBase] = useState("");
 
@@ -17,15 +20,14 @@ export default function FormularioCategoria({ list = [] }) {
     setFilter(e.target.value); // function to filter the list by name
   };
 
-  const handleModal = (cod_categ) => {
+  const handleModalUpdate = (cod_categ) => {
     setCategoriaUpdateModalVisible(true);
     setCod_CategBase(cod_categ);
   };
 
-  const deleteCategoria = (cod_categ) => {
-    fetch(`http://localhost:5000/categoria/delete/${cod_categ}`).then((res) => {
-      res.json().then(() => alert("Operação Sucedida!"));
-    });
+  const handleModalDelete = (cod_categ) => {
+    setCategoriaDeleteModalVisible(true);
+    setCod_CategBase(cod_categ);
   };
 
   return (
@@ -49,15 +51,21 @@ export default function FormularioCategoria({ list = [] }) {
                 <td>
                   <button
                     className="delete buttonAction"
-                    onClick={() => deleteCategoria(cod_categ)}
+                    onClick={() => handleModalDelete(cod_categ)}
                   >
                     Deletar
                   </button>
+                  {categoriaDeleteModalVisible ? (
+                    <ModalCategoriaDelete
+                      onClose={() => setCategoriaDeleteModalVisible(false)}
+                      cod_CategBase={cod_CategBase}
+                    />
+                  ) : null}
                 </td>
                 <td>
                   <button
                     className="update buttonAction"
-                    onClick={() => handleModal(cod_categ)}
+                    onClick={() => handleModalUpdate(cod_categ)}
                   >
                     Atualizar
                   </button>

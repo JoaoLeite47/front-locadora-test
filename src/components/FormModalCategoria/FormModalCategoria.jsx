@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
 export default function FormModalCategoria() {
-  const [descricao, setDescricao] = useState("");
-  const [valor_diaria, setValor_diaria] = useState("");
+  const [newDescricao, setNewDescricao] = useState("");
+  const [newValor_diaria, setNewValor_diaria] = useState("");
 
   const submitHandler = () => {
-    const data = { descricao, valor_diaria };
+    const dataCreateCategoria = {
+      descricao: newDescricao,
+      valor_diaria: newValor_diaria,
+    };
     try {
       fetch("http://localhost:5000/categoria/novo", {
         method: "POST",
@@ -13,7 +16,7 @@ export default function FormModalCategoria() {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(dataCreateCategoria),
       }).then(() => {
         alert("Operação concluida!");
       });
@@ -27,9 +30,9 @@ export default function FormModalCategoria() {
       <input
         type="text"
         name="descricao"
-        value={descricao}
+        value={newDescricao}
         onChange={(e) => {
-          setDescricao(e.target.value);
+          setNewDescricao(e.target.value);
         }}
         placeholder="Descrição"
         required
@@ -39,9 +42,9 @@ export default function FormModalCategoria() {
         step="0.1"
         min="0"
         name="valor_diaria"
-        value={valor_diaria}
+        value={newDescricao}
         onChange={(e) => {
-          setValor_diaria(e.target.value);
+          setNewValor_diaria(e.target.value);
         }}
         placeholder="Valor da diária"
         required

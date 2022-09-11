@@ -18,7 +18,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
     getClienteUnique();
   }, []);
 
-  const submitHandler = () => {
+  const submitHandlerUpdate = () => {
     const data = { rg, dt_nascimento, cnh, nome, endereco };
     try {
       fetch(`http://localhost:5000/cliente/update/${cpfBase}`, {
@@ -44,7 +44,7 @@ export default function ModalClienteUpdate({ onClose = () => {}, cpfBase }) {
           {Cliente.map(({ rg, dt_nascimento, cnh, nome, endereco, cpf }) => {
             return (
               <div className="formUpdateCliente">
-                <form onSubmit={submitHandler} key={cpf}>
+                <form onSubmit={submitHandlerUpdate} key={cpf}>
                   <input
                     type="text"
                     name="rg"

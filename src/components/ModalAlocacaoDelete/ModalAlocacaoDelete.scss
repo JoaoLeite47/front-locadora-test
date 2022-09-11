@@ -1,0 +1,85 @@
+@import "../../Global.scss";
+.alocacaoModalDelete {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 200%;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .alocacaoModalDeleteContainer {
+    background-color: $primaryCollor;
+    color: black;
+    width: 50%;
+    height: 30%;
+    border-radius: 20px;
+
+    .alocacaoModalDeleteClose {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      width: 32px;
+      height: 32px;
+      right: calc(-100% + 64px);
+      cursor: pointer;
+      top: 16px;
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        width: 2.5px;
+        height: 24px;
+        background-color: red;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .alocacaoModalDeleteContant {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .deleteButtons {
+        padding: 10px;
+
+        .deleteOptions {
+          margin: 10px;
+          padding: 15px;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        .deleteConfirm {
+          background-color: $secondaryCollor;
+          color: $backgroundCollor;
+          transition: all 0.1s ease-in;
+        }
+        .deleteConfirm:hover {
+          background-color: rgb(2, 211, 2);
+        }
+        .deleteCancel {
+          background-color: red;
+          color: $backgroundCollor;
+        }
+        .deleteCancel:hover {
+          background-color: rgb(207, 3, 3);
+        }
+      }
+      //Put the form data here
+    }
+  }
+}

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import ModalCarroDelete from "../ModalCarroDelete/ModalCarroDelete";
 import ModalCarrosUpdate from "../ModalCarrosUpdate/ModalCarrosUpdate";
 import "./FormularioCarros.css";
 
 export default function FormularioCarros({ list = [] }) {
   const [filter, setFilter] = useState("");
   const [carroUpdateModalVisible, setCarroUpdateModalVisible] = useState(false);
+  const [carroDeleteModalVisible, setCarroDeleteModalVisible] = useState(false);
   const [chassiBase, setChassiBase] = useState("");
 
   if (filter) {
@@ -17,14 +19,13 @@ export default function FormularioCarros({ list = [] }) {
     setChassiBase(chassi);
   };
 
-  const handleFilter = (e) => {
-    setFilter(e.target.value); // function to filter the list by name
+  const handleModalDelete = (chassi) => {
+    setCarroDeleteModalVisible(true);
+    setChassiBase(chassi);
   };
 
-  const deleteCarros = (chassi) => {
-    fetch(`http://localhost:5000/carro/delete/${chassi}`).then((res) => {
-      res.json().then(() => alert("Operação sucedida"));
-    });
+  const handleFilter = (e) => {
+    setFilter(e.target.value); // function to filter the list by name
   };
 
   return (
@@ -57,10 +58,16 @@ export default function FormularioCarros({ list = [] }) {
                   <td>
                     <button
                       className="delete buttonAction"
-                      onClick={() => deleteCarros(chassi)}
+                      onClick={() => handleModalDelete(chassi)}
                     >
                       Deletar
                     </button>
+                    {carroDeleteModalVisible ? (
+                      <ModalCarroDelete
+                        onClose={() => setCarroDeleteModalVisible(false)}
+                        chassiBase={chassiBase}
+                      />
+                    ) : null}
                   </td>
                   <td>
                     <button

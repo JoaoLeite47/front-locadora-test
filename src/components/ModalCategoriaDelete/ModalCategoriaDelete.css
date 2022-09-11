@@ -1,0 +1,76 @@
+.categoriaModalDelete {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 400%;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer {
+  background-color: rgb(77, 77, 77);
+  color: black;
+  width: 50%;
+  height: 30%;
+  border-radius: 20px;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteClose {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 32px;
+  height: 32px;
+  right: calc(-100% + 64px);
+  cursor: pointer;
+  top: 16px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteClose:before, .categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteClose:after {
+  content: "";
+  position: absolute;
+  width: 2.5px;
+  height: 24px;
+  background-color: red;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteClose:before {
+  transform: rotate(45deg);
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteClose:after {
+  transform: rotate(-45deg);
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteContant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteContant .deleteButtons {
+  padding: 10px;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteContant .deleteButtons .deleteOptions {
+  margin: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteContant .deleteButtons .deleteConfirm {
+  background-color: #39ff14;
+  color: rgb(121, 120, 120);
+  transition: all 0.1s ease-in;
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteContant .deleteButtons .deleteConfirm:hover {
+  background-color: rgb(2, 211, 2);
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteContant .deleteButtons .deleteCancel {
+  background-color: red;
+  color: rgb(121, 120, 120);
+}
+.categoriaModalDelete .categoriaModalDeleteContainer .categoriaModalDeleteContant .deleteButtons .deleteCancel:hover {
+  background-color: rgb(207, 3, 3);
+}/*# sourceMappingURL=ModalCategoriaDelete.css.map */

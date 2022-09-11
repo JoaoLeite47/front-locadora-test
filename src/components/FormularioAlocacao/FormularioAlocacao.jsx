@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ModalAlocacaoDelete from "../ModalAlocacaoDelete/ModalAlocacaoDelete";
 import ModalAlocacaoUpdate from "../ModalAlocacaoUpdate/ModalAlocacaoUpdate";
 import "./FormularioAlocacao.css";
 
@@ -6,7 +7,9 @@ export default function FormularioAlocacao({ list = [] }) {
   const [filter, setFilter] = useState("");
   const [alocacaoUpdateModalVisible, setAlocacaoUpdateModalVisible] =
     useState(false);
-  const [id_alocBase, setId_alocBase] = useState("");
+  const [alocacaoDeleteModalVisible, setAlocacaoDeleteModalVisible] =
+    useState(false);
+  const [idAlocBase, setIdalocBase] = useState("");
 
   if (filter) {
     const exp = eval(`/${filter.replace(/[^\d\w]+/, ".*")}/i`);
@@ -17,15 +20,15 @@ export default function FormularioAlocacao({ list = [] }) {
     setFilter(e.target.value); // function to filter the list by name
   };
 
-  const handleModal = (id_aloc) => {
+  const handleModalUpdate = (id_aloc) => {
     setAlocacaoUpdateModalVisible(true);
-    setId_alocBase(id_aloc);
+    setIdalocBase(id_aloc);
   };
 
-  const deleteAlocacao = (id_aloc) => {
-    fetch(`http://localhost:5000/alocacao/delete/${id_aloc}`).then((res) => {
-      res.json().then(() => alert("Operação sucedida!"));
-    });
+  const handleModalDelete = (id_aloc) => {
+    setAlocacaoDeleteModalVisible(true);
+    setIdalocBase(id_aloc);
+    console.log(id_aloc)
   };
 
   return (
@@ -55,22 +58,28 @@ export default function FormularioAlocacao({ list = [] }) {
                     <td>
                       <button
                         className="delete buttonAction"
-                        onClick={() => deleteAlocacao(id_aloc)}
+                        onClick={() => handleModalDelete(id_aloc)}
                       >
                         Deletar
                       </button>
+                      {alocacaoDeleteModalVisible ? (
+                        <ModalAlocacaoDelete
+                          onClose={() => setAlocacaoDeleteModalVisible(false)}
+                          idAlocBase={idAlocBase}
+                        />
+                      ) : null}
                     </td>
                     <td>
                       <button
                         className="update buttonAction"
-                        onClick={() => handleModal(id_aloc)}
+                        onClick={() => handleModalUpdate(id_aloc)}
                       >
                         Atualizar
                       </button>
                       {alocacaoUpdateModalVisible ? (
                         <ModalAlocacaoUpdate
                           onClose={() => setAlocacaoUpdateModalVisible(false)}
-                          id_alocBase={id_alocBase}
+                          idAlocBase={idAlocBase}
                         />
                       ) : null}
                     </td>

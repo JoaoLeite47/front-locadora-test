@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 
 export default function FormModalCarros() {
-  const [chassi, setChassi] = useState("");
-  const [cor, setCor] = useState("");
-  const [modelo, setModelo] = useState("");
-  const [marca, setMarca] = useState("");
-  const [placa, setPlaca] = useState("");
-  const [ano, setAno] = useState("");
-  const [categoria_fk, setCategoria_fk] = useState("");
+  const [newChassi, setNewChassi] = useState("");
+  const [Newcor, setNewCor] = useState("");
+  const [Newmodelo, setNewModelo] = useState("");
+  const [Newmarca, setNewMarca] = useState("");
+  const [Newplaca, setNewPlaca] = useState("");
+  const [Newano, setNewAno] = useState("");
+  const [Newcategoria_fk, setNewCategoria_fk] = useState("");
 
   const submitHandler = () => {
-    const data = { chassi, cor, modelo, marca, placa, ano, categoria_fk };
+    const dataCreateCarros = {
+      chassi: newChassi,
+      cor: Newcor,
+      modelo: Newmodelo,
+      marca: Newmarca,
+      placa: Newplaca,
+      ano: Newano,
+      categoria_fk: Newcategoria_fk,
+    };
     try {
       fetch("http://localhost:5000/carro/novo", {
         method: "POST",
@@ -18,7 +26,7 @@ export default function FormModalCarros() {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(dataCreateCarros),
       }).then(() => {
         alert("Operação concluida!");
       });
@@ -32,9 +40,9 @@ export default function FormModalCarros() {
       <input
         type="text"
         name="chassi"
-        value={chassi}
+        value={newChassi}
         onChange={(e) => {
-          setChassi(e.target.value);
+          setNewChassi(e.target.value);
         }}
         placeholder="Chassi"
         required
@@ -42,9 +50,9 @@ export default function FormModalCarros() {
       <input
         type="text"
         name="cor"
-        value={cor}
+        value={Newcor}
         onChange={(e) => {
-          setCor(e.target.value);
+          setNewCor(e.target.value);
         }}
         placeholder="Cor"
         required
@@ -52,9 +60,9 @@ export default function FormModalCarros() {
       <input
         type="number"
         name="modelo"
-        value={modelo}
+        value={Newmodelo}
         onChange={(e) => {
-          setModelo(e.target.value);
+          setNewModelo(e.target.value);
         }}
         placeholder="Modelo"
         required
@@ -62,9 +70,9 @@ export default function FormModalCarros() {
       <input
         type="text"
         name="marca"
-        value={marca}
+        value={Newmarca}
         onChange={(e) => {
-          setMarca(e.target.value);
+          setNewMarca(e.target.value);
         }}
         placeholder="Marca"
         required
@@ -72,9 +80,9 @@ export default function FormModalCarros() {
       <input
         type="text"
         name="placa"
-        value={placa}
+        value={Newplaca}
         onChange={(e) => {
-          setPlaca(e.target.value);
+          setNewPlaca(e.target.value);
         }}
         placeholder="Placa"
         required
@@ -82,9 +90,9 @@ export default function FormModalCarros() {
       <input
         type="number"
         name="ano"
-        value={ano}
+        value={Newano}
         onChange={(e) => {
-          setAno(e.target.value);
+          setNewAno(e.target.value);
         }}
         placeholder="Ano"
         required
@@ -93,9 +101,9 @@ export default function FormModalCarros() {
       <input
         type="number"
         name="categoria_fk"
-        value={categoria_fk}
+        value={Newcategoria_fk}
         onChange={(e) => {
-          setCategoria_fk(e.target.value);
+          setNewCategoria_fk(e.target.value);
         }}
         placeholder="Categoria"
         required
