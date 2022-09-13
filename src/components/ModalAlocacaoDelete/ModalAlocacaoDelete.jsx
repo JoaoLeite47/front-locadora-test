@@ -16,7 +16,7 @@ export default function ModalAlocacaoDelete({ onClose = () => {}, idAlocBase }) 
       <div className="alocacaoModalDeleteContainer">
         <button className="alocacaoModalDeleteClose" onClick={onClose} />
         <div className="alocacaoModalDeleteContant">
-          <h1>Deletar: {idAlocBase}</h1>
+          <h1>Deletar Id: {idAlocBase}?</h1>
           <div className="deleteButtons">
             <button
               className="deleteConfirm deleteOptions"

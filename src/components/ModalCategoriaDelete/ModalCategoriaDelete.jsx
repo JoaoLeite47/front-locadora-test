@@ -21,7 +21,7 @@ export default function ModalCategoriaDelete({
       <div className="categoriaModalDeleteContainer">
         <button className="categoriaModalDeleteClose" onClick={onClose} />
         <div className="categoriaModalDeleteContant">
-          <h1>Deletar: {cod_CategBase}</h1>
+          <h1>Deletar Id: {cod_CategBase}?</h1>
           <div className="deleteButtons">
             <button
               className="deleteConfirm deleteOptions"

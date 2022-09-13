@@ -16,7 +16,7 @@ export default function ModalCarroDelete({ onClose = () => {}, chassiBase }) {
       <div className="carroModalDeleteContainer">
         <button className="carroModalDeleteClose" onClick={onClose} />
         <div className="carroModalDeleteContant">
-          <h1>Deletar: {chassiBase}</h1>
+          <h1>Deletar Chassi: {chassiBase}?</h1>
           <div className="deleteButtons">
             <button
               className="deleteConfirm deleteOptions"

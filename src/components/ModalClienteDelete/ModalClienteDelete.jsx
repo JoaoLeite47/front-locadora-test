@@ -16,7 +16,7 @@ export default function ModalClienteDelete({ onClose = () => {}, cpfBase }) {
       <div className="clienteModalDeleteContainer">
         <button className="clienteModalDeleteClose" onClick={onClose} />
         <div className="clienteModalDeleteContant">
-          <h1>Deletar: {cpfBase}</h1>
+          <h1>Deletar CPF:{cpfBase}?</h1>
           <div className="deleteButtons">
             <button
               className="deleteConfirm deleteOptions"
