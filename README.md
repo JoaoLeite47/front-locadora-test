@@ -44,3 +44,8 @@ $ app.py
 ### 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 - [React](https://pt-br.reactjs.org/)
+
+<table>
+  <tr>
+    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/100146681?v=4" width="100px;" alt=""/><br /><sub><b>João Leite</b></sub></a><br />😎</a></td>
+</table>
