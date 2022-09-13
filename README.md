@@ -14,6 +14,7 @@ Tabela de conteúdos
    * [Instalação](#instalacao)
        * [npm i](#instalacao)
    * [Como usar](#como-usar)
+   	   * [npm run start](#como-usar)
       * [Pre Requisitos](#pre-requisitos)
               * [Back end API, React,Sass](#pre-requisitos)
       * [Remote files](#remote-files)
