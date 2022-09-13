@@ -4,6 +4,7 @@ import InfoAllClientes from "../InfoAllClientes/InfoAllClientes";
 import InfoAllCarros from "../InfoAllCarros/InfoAllCarros";
 import InfoAllAlocacoes from "../InfoAllAlocacoes/InfoAllAlocacoes";
 import InfoAllCategoria from "../InfoAllCategoria/InfoAllCategoria";
+import ChartAll from "../ChartAll/ChartAll";
 
 export default function InfoAll() {
   let [cliente, setCliente] = useState([]);
@@ -51,6 +52,12 @@ export default function InfoAll() {
           </div>
         </div>
         <div className="itensContainer itensContainerSecond">
+          <ChartAll
+            cliente={cliente}
+            carros={carros}
+            alocacao={alocacao}
+            categoria={categoria}
+          />
         </div>
       </div>
     </div>

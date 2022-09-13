@@ -1,0 +1,12 @@
+.ChartAll {
+  align-items: center;
+  margin-top: 20px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  width: 100%;
+
+  .chartAllPie {
+    overflow-y: hidden;
+  }
+}
